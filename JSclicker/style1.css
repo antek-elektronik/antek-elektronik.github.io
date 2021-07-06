@@ -1,0 +1,78 @@
+body{
+    background-color: #6db5fc;
+}
+
+.Score{
+    font-size: 50;
+    text-align: center;
+}
+
+.NotBoughtPowerUp{
+    color: red;
+    width: 100;
+    height: 50;
+    border: 1px #8adcff;
+    background-color:#75d6ff;
+}
+.NotBoughtPowerUp:hover{
+    background-color: #8adcff;
+    border: solid 3px white;
+}
+
+.AvailablePowerUp{
+    color: blue;
+    width: 100;
+    height: 50;
+    border: 1px #8adcff;
+    background-color:#75d6ff;
+}
+.AvailablePowerUp:hover{
+    background-color: #8adcff;
+    border: solid 3px white;
+}
+
+.BoughtPowerUp{
+    color: green;
+    width: 100;
+    height: 50;
+    border: 1px #8adcff;
+    background-color:#75d6ff;
+}
+
+.BoughtPowerUp:hover{
+    background-color: #8adcff;
+    border: solid 3px white;
+}
+
+
+.ClickButton{
+    width: 350px;
+    height: 350px;
+
+    border: solid 3px #48a4ff;
+    background-image: url("pick1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    margin-left: calc(50% - (350px / 2));
+}
+.clickedButton{
+    width: 350px;
+    height: 350px;
+
+    border: solid 3px #48a4ff;
+    background-image: url("pick2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    text-align: center;
+    margin-left: calc(50% - (350px / 2));
+}
+
+.shop{
+    text-align: center;
+    margin-top: 30px;
+    padding: 5px;
+    border: solid 1px ;
+    background-color: #3b9dff;
+}
