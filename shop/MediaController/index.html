@@ -108,15 +108,21 @@
       <br>
       <img src="https:\\antek-gzara-animations.github.io\resources\MediaController\image1.png" class="imageHorizontal" />
       <br>
-      <button class="downloadButton">
+      <button class="downloadButton" onclick="download();">
         <img src="https:\\antek-gzara-animations.github.io\resources\windowsLogo.png" class="downloadImage" />
         Pobierz instalator Windows
       </button>
     </p>
 
 
-    <script>  
-
+    <script>
+      function download(){
+        ErrorMessage();
+        //aktualnie nie posiadam pliku
+      }
+      function ErrorMessage(){
+        alert("aplikacja aktualnie nie dostępna");
+      }
     </script>
   </body>
 </html>
