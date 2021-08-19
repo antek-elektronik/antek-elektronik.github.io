@@ -127,7 +127,7 @@
     <div class="headerDiv">
       <img class="storeIcon" src="https:\\antek-gzara-animations.github.io/resources/store%20logo.png" />
       <p class="StoreName">Antek's Store</p>
-      <button class="HeaderButton" id="HomeBtn">Strona główna</button>
+      <button class="HeaderButton" id="HomeBtn" onclick="Home();">Strona główna</button>
       <button class="HeaderButton">Programy</button>
       <button class="HeaderButton">Gry</button>
     </div>
@@ -151,12 +151,20 @@
 
 
     <script>  
+      /*
       let homeButton = document.getElementById("HomeBtn");
 
       homeButton.addEventListener("click",Home());
+      */
 
       function Home(){
-        window.location.href = "https:\\\\antek-gzara-animations.github.io\\shop"
+        window.location.href = "https:\\\\antek-gzara-animations.github.io\\shop";
+      }
+      function Apps(){
+        window.location.href = "https:\\\\antek-gzara-animations.github.io\\shop\\programs";
+      }
+      function Games(){
+        window.location.href = "https:\\\\antek-gzara-animations.github.io\\shop\\games";
       }
     </script>
   </body>
