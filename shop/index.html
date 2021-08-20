@@ -24,6 +24,8 @@
         width: 210px;
         padding: 4px 4px 0 4px;
         height: 360px;
+        box-shadow: 4px 5px 5px grey;
+        margin: 3px;
       }
       .itemLogo{
         height: 200px;
@@ -80,7 +82,7 @@
         top: 0;
         left: 0;
         margin-bottom: 10px;
-        overflow:hidden;
+        /*overflow:hidden;*/
         background-color: #bae5f7;
         padding: 2px;
       }
@@ -120,6 +122,7 @@
         border-radius: 30px;
         border-width: 3px;
       }
+      
     </style>
   </head>
 
@@ -128,8 +131,8 @@
       <img class="storeIcon" src="https:\\antek-gzara-animations.github.io/resources/store%20logo.png" />
       <p class="StoreName">Antek's Store</p>
       <button class="HeaderButton" id="HomeBtn" onclick="Home();">Strona główna</button>
-      <button class="HeaderButton">Programy</button>
-      <button class="HeaderButton">Gry</button>
+      <button class="HeaderButton" id="Apps" onclick="Apps();">Programy</button>
+      <button class="HeaderButton" id="Games" onclick="Games();">Gry</button>
     </div>
     <a href="MediaController" class="itemLink">
       <div class="item">
@@ -149,13 +152,14 @@
       </div>
     </a>
 
-
     <script>  
       /*
       let homeButton = document.getElementById("HomeBtn");
 
       homeButton.addEventListener("click",Home());
       */
+
+      promo1();
 
       function Home(){
         window.location.href = "https:\\\\antek-gzara-animations.github.io\\shop";
@@ -164,8 +168,20 @@
         window.location.href = "https:\\\\antek-gzara-animations.github.io\\shop\\programs";
       }
       function Games(){
-        window.location.href = "https:\\\\antek-gzara-animations.github.io\\shop\\games";
+        //window.location.href = "https:\\\\antek-gzara-animations.github.io\\shop\\games";
+        //document.getElementById("subHeaderButton").style.display = "block";
       }
+
+      document.getElementById("Games").addEventListener("mouseenter", function(){
+        document.getElementById("subHeaderButton").style.display = "block";
+      });
+
+      document.getElementById("Games").addEventListener("mouseleave", function(){
+        document.getElementById("subHeaderButton").style.display = "none";
+      });
+
+
+      
     </script>
   </body>
 </html>
