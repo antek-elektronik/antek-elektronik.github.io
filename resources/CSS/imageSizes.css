@@ -1,0 +1,50 @@
+.ItemHeaderName{
+  text-align: center;
+  font-size: 40px;
+}
+.content{
+  text-align: center;
+  font-size: 25px;
+}
+.image{
+  width: 300px;
+  height: 300px;
+  display: inline-block;
+
+  border: solid 2px black;
+  border-radius: 5px;
+  
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.imageHorizontal{
+  width: 115px;
+  height: 430px;
+  display: inline-block;
+
+  border: solid 2px black;
+  border-radius: 5px;
+  
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.downloadImage{
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}
+.downloadButton:hover{
+  border: solid 1px #6ea5ff;
+  background-color: transparent;
+  color: #6ea5ff;
+}
+.downloadButton{
+  background-color: #6ea5ff;
+  border: solid 1px #5e9cff;
+  margin-top: 40px;
+  transition-duration: 0.5s;
+  width: 300px;
+  height: 100px;
+  color:White;
+  font-size: 20px;
+}

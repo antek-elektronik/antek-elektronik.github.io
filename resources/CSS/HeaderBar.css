@@ -1,0 +1,28 @@
+.headerDiv{
+  width: 100%;
+  height: 90px;
+  display: block;
+  position: sticky;
+  border: solid 1px black;
+  top: 0;
+  left: 0;
+  margin-bottom: 10px;
+  overflow:hidden;
+  background-color: #bae5f7;
+  padding: 2px;
+}
+.storeIcon{
+  max-width: 75px;
+  /*height: 70px;*/
+  display: inline-block;
+  border: solid 1px black;
+  border-radius: 50px;
+  background-color: #b5e5fa;
+  
+}
+.StoreName{
+  font-size: 45px;
+  display: inline-block;
+  transform: translateY(-50%);
+  top: 50%;
+}
