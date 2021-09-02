@@ -49,11 +49,15 @@
         bottom: 0;
         left: 0;
         display: inline-block;
-        color: white;
+        color: #108a00;
         border: solid 1px black;
         background-color: #94ffbb;
         border-radius: 15px;
         padding: 3px;
+
+        /*experimantal
+        text-shadow: 0 0 3px #FF0000;
+        */
       }
       .ItemNotAvailable{
         position: absolute;
@@ -160,36 +164,6 @@
       </div>
     </a>
 
-    <script>  
-      /*
-      let homeButton = document.getElementById("HomeBtn");
-
-      homeButton.addEventListener("click",Home());
-      */
-
-      promo1();
-
-      function Home(){
-        window.location.href = "https:\\\\antek-gzara-animations.github.io\\shop";
-      }
-      function Apps(){
-        window.location.href = "https:\\\\antek-gzara-animations.github.io\\shop\\programs";
-      }
-      function Games(){
-        //window.location.href = "https:\\\\antek-gzara-animations.github.io\\shop\\games";
-        //document.getElementById("subHeaderButton").style.display = "block";
-      }
-
-      document.getElementById("Games").addEventListener("mouseenter", function(){
-        document.getElementById("subHeaderButton").style.display = "block";
-      });
-
-      document.getElementById("Games").addEventListener("mouseleave", function(){
-        document.getElementById("subHeaderButton").style.display = "none";
-      });
-
-
-      
-    </script>
+    <script src="antek-gzara-animations.github.io/shop/navigationButtons.js"></script>
   </body>
 </html>
