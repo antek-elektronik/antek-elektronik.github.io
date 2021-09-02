@@ -18,7 +18,7 @@
         top: 0;
         left: 0;
         margin-bottom: 10px;
-        overflow:hidden;
+        /*overflow:hidden;*/
         background-color: #bae5f7;
         padding: 2px;
       }
@@ -29,13 +29,34 @@
         border: solid 1px black;
         border-radius: 50px;
         background-color: #b5e5fa;
-        
       }
       .StoreName{
         font-size: 45px;
         display: inline-block;
         transform: translateY(-50%);
         top: 50%;
+      }
+      .HeaderButton{
+        font-size: 20px;
+        height: 60px;
+        width: 150px;
+        position: static;
+        margin-top: 10px;
+        margin-left: 20px;
+        transform: translateY(-50%);
+        top: 50%;
+        border: solid 3px #3bd188;
+        color: white;
+        background-color: #42f59e;
+        transition-duration: 0.5s;
+        display: inline-block;
+      }
+      .HeaderButton:hover{
+        color: #3bd188;
+        background-color: transparent;
+        border-color: #3bd188;
+        border-radius: 30px;
+        border-width: 3px;
       }
     </style>
     <style>
@@ -89,6 +110,7 @@
         color:White;
         font-size: 20px;
       }
+      
     </style>
   </head>
 
@@ -96,6 +118,9 @@
     <div class="headerDiv">
       <img class="storeIcon" src="https:\\antek-gzara-animations.github.io/resources/store%20logo.png" />
       <p class="StoreName">Antek's Store</p>
+      <button class="HeaderButton" id="HomeBtn" onclick="Home();">Strona główna</button>
+      <button class="HeaderButton" id="Apps" onclick="Apps();">Programy</button>
+      <button class="HeaderButton" id="Games" onclick="Games();">Gry</button>
     </div>
     
     <h1 class="ItemHeaderName">
@@ -117,11 +142,13 @@
 
     <script>
       function download(){
-        window.open("antek-gzara-animations.github.io/resources/MediaController/download.rar");
+        window.open("https://antek-gzara-animations.github.io/resources/MediaController/download.rar");
       }
       function ErrorMessage(){
         alert("aplikacja aktualnie nie dostępna");
       }
     </script>
+
+    <script src="https://antek-gzara-animations.github.io/shop/navButtons.js"></script>
   </body>
 </html>
