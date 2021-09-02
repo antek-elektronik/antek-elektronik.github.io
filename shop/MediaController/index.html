@@ -4,124 +4,12 @@
   <head>
     <title>Antek's Store</title>
     <link href="https:\\antek-gzara-animations.github.io\resources\logo2.png" rel="icon" />
-    <style>
-      body{
-        background-color: #cfedfa;
-      }
-
-      .headerDiv{
-        width: 100%;
-        height: 90px;
-        display: block;
-        position: sticky;
-        border: solid 1px black;
-        top: 0;
-        left: 0;
-        margin-bottom: 10px;
-        /*overflow:hidden;*/
-        background-color: #bae5f7;
-        padding: 2px;
-      }
-      .storeIcon{
-        max-width: 75px;
-        /*height: 70px;*/
-        display: inline-block;
-        border: solid 1px black;
-        border-radius: 50px;
-        background-color: #b5e5fa;
-      }
-      .StoreName{
-        font-size: 45px;
-        display: inline-block;
-        transform: translateY(-50%);
-        top: 50%;
-      }
-      .HeaderButton{
-        font-size: 20px;
-        height: 60px;
-        width: 150px;
-        position: static;
-        margin-top: 10px;
-        margin-left: 20px;
-        transform: translateY(-50%);
-        top: 50%;
-        border: solid 3px #3bd188;
-        color: white;
-        background-color: #42f59e;
-        transition-duration: 0.5s;
-        display: inline-block;
-      }
-      .HeaderButton:hover{
-        color: #3bd188;
-        background-color: transparent;
-        border-color: #3bd188;
-        border-radius: 30px;
-        border-width: 3px;
-      }
-    </style>
-    <style>
-      .ItemHeaderName{
-        text-align: center;
-        font-size: 40px;
-      }
-      .content{
-        text-align: center;
-        font-size: 25px;
-      }
-      .image{
-        width: 300px;
-        height: 300px;
-        display: inline-block;
-
-        border: solid 2px black;
-        border-radius: 5px;
-        
-        margin-top: 10px;
-        margin-bottom: 10px;
-      }
-      .imageHorizontal{
-        width: 115px;
-        height: 430px;
-        display: inline-block;
-
-        border: solid 2px black;
-        border-radius: 5px;
-        
-        margin-top: 10px;
-        margin-bottom: 10px;
-      }
-      .downloadImage{
-        display: inline-block;
-        width: 20px;
-        height: 20px;
-      }
-      .downloadButton:hover{
-        border: solid 1px #6ea5ff;
-        background-color: transparent;
-        color: #6ea5ff;
-      }
-      .downloadButton{
-        background-color: #6ea5ff;
-        border: solid 1px #5e9cff;
-        margin-top: 40px;
-        transition-duration: 0.5s;
-        width: 300px;
-        height: 100px;
-        color:White;
-        font-size: 20px;
-      }
-      
-    </style>
+    <link href="https:\\antek-gzara-animations.github.io\resources\CSS\HeaderBar.css" />
+    <link href="https:\\antek-gzara-animations.github.io\resources\CSS\imageSizes.css" />
   </head>
 
   <body>
-    <div class="headerDiv">
-      <img class="storeIcon" src="https:\\antek-gzara-animations.github.io/resources/store%20logo.png" />
-      <p class="StoreName">Antek's Store</p>
-      <button class="HeaderButton" id="HomeBtn" onclick="Home();">Strona główna</button>
-      <button class="HeaderButton" id="Apps" onclick="Apps();">Programy</button>
-      <button class="HeaderButton" id="Games" onclick="Games();">Gry</button>
-    </div>
+    <div id="HeaderBar"></div>
     
     <h1 class="ItemHeaderName">
       Media Controller
@@ -150,5 +38,13 @@
     </script>
 
     <script src="https://antek-gzara-animations.github.io/shop/navButtons.js"></script>
+
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+      //load header bar
+      $(function(){
+        $("#HeaderBar").load("https:\\\\antek-gzara-animations.github.io\\shop\\navbar.html");
+      });
+    </script>
   </body>
 </html>
