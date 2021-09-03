@@ -4,36 +4,18 @@
   <head>
     <title>Antek's Store</title>
     <link href="https:\\antek-gzara-animations.github.io\resources\logo2.png" rel="icon" />
-    <link href="https:\\antek-gzara-animations.github.io\resources\CSS\imageSizes.css" rel="stylesheet" />
     <link href="https:\\antek-gzara-animations.github.io\resources\CSS\HeaderBar.css" rel="stylesheet" />
-    <style>
-      body{
-        background-color: #cfedfa;
-      }
-      .imageRectangle{
-  width: 400px;
-  height: 200px;
-  display: inline-block;
-
-  border: solid 2px black;
-  border-radius: 5px;
-  
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-    </style>
+    <link href="https:\\antek-gzara-animations.github.io\resources\CSS\imageSizes.css" rel="stylesheet" />
   </head>
 
   <body>
-    <div class="headerDiv">
-      <img class="storeIcon" src="https:\\antek-gzara-animations.github.io/resources/store%20logo.png" />
-      <p class="StoreName">Antek's Store</p>
-    </div>
+    <div id="HeaderBar"></div>
     
     <h1 class="ItemHeaderName">
       J.A.R.V.I.S
     </h1>
     <p class="content">
+      
       Jarvis to prosta aplikacja zainspirowana filmami "Iron Man"
       <br>
       <img src="https:\\antek-gzara-animations.github.io\resources\Jarvis\jarvis1logo.png" class="image" />
@@ -42,21 +24,35 @@
       <br>
       <img src="https:\\antek-gzara-animations.github.io\resources\Jarvis\image2.png" class="imageRectangle" />
       <br>
+
       <button class="downloadButton" onclick="download();">
         <img src="https:\\antek-gzara-animations.github.io\resources\windowsLogo.png" class="downloadImage" />
         Pobierz instalator Windows
+      </button>
+      <button class="downloadButton" onclick="Home();" style="margin-top: 20px;">
+        <img src="https:\\antek-gzara-animations.github.io\resources\house.png" class="downloadImage" />
+        Powrót
       </button>
     </p>
 
 
     <script>
       function download(){
-        ErrorMessage();
-        //aktualnie nie posiadam pliku
+        window.open("https://antek-gzara-animations.github.io/resources/Jarvis/download.rar");
       }
       function ErrorMessage(){
         alert("aplikacja aktualnie nie dostępna");
       }
+    </script>
+
+    <script src="https://antek-gzara-animations.github.io/shop/navButtons.js"></script>
+
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+      //load header bar
+      $(function(){
+        $("#HeaderBar").load("https:\\\\antek-gzara-animations.github.io\\shop\\navbar.html");
+      });
     </script>
   </body>
 </html>
