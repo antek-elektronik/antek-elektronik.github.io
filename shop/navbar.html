@@ -16,8 +16,11 @@
     </div>
     <script>
       setTimeout(function(){
-        document.getElementById("Games").style.transitionDuration = "2s";
-
+        //document.getElementById("Games").style.transitionDuration = "2s";
+        
+        document.getElementById("HomeBtn").style.transitionDuration = "1s";
+        document.getElementById("Apps").style.transitionDuration = "1s";
+        document.getElementById("Games").style.transitionDuration = "1s";
 
         document.getElementById("HomeBtn").style.width = "150px";
         document.getElementById("Apps").style.width = "150px";
@@ -26,6 +29,10 @@
         document.getElementById("HomeBtn").style.fontSize = "20px";
         document.getElementById("Apps").style.fontSize = "20px";
         document.getElementById("Games").style.fontSize = "20px";
+
+        document.getElementById("HomeBtn").style.transitionDuration = "0.5s";
+        document.getElementById("Apps").style.transitionDuration = "0.5s";
+        document.getElementById("Games").style.transitionDuration = "0.5s";
         
       }, 300);
     </script>
