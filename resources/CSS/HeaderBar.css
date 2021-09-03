@@ -38,7 +38,7 @@
   color: white;
   background-color: #42f59e;
   transition-duration: 0.5s;
-  display: inline-block;
+  display: inline;
 }
 .HeaderButton:hover{
   color: #3bd188;
