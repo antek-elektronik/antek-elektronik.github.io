@@ -1,6 +1,5 @@
 function Home(){
-  //window.location.href = "https:\\\\antek-gzara-animations.github.io\\shop";
-  document.getElementsByClassName("HeaderButton").style.color = "red";
+  window.location.href = "https:\\\\antek-gzara-animations.github.io\\shop";
 }
 function Apps(){
   window.location.href = "https:\\\\antek-gzara-animations.github.io\\shop\\programs";
