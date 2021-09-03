@@ -28,8 +28,8 @@
 .HeaderButton{
   font-size: 20px;
   height: 60px;
-  width: 150px;
-  position: relative;
+  width: 0px;
+  position: static;
   margin-top: 10px;
   margin-left: 20px;
   transform: translateY(-50%);
@@ -38,7 +38,7 @@
   color: white;
   background-color: #42f59e;
   transition-duration: 0.5s;
-  display: inline;
+  display: inline-block;
 }
 .HeaderButton:hover{
   color: #3bd188;
