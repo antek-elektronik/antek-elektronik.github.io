@@ -16,9 +16,17 @@
     </div>
 
     <script>
-      document.getElementById("HomeBtn").style.display = "inline-block";
-      document.getElementById("Apps").style.display = "inline-block";
-      document.getElementById("Games").style.display = "inline-block";
+      setTimeout(1000, loadButtons());
+
+      function loadbuttons(){
+        document.getElementById("HomeBtn").style.display = "inline-block";
+        document.getElementById("Apps").style.display = "inline-block";
+        document.getElementById("Games").style.display = "inline-block";
+
+        document.getElementById("HomeBtn").style.position = "static";
+        document.getElementById("Apps").style.position = "static";
+        document.getElementById("Games").style.position = "static";
+      }
     </script>
    </body>
 </html>

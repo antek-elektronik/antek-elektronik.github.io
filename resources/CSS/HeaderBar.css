@@ -29,7 +29,7 @@
   font-size: 20px;
   height: 60px;
   width: 150px;
-  position: static;
+  position: relative;
   margin-top: 10px;
   margin-left: 20px;
   transform: translateY(-50%);
