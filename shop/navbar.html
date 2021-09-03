@@ -15,13 +15,15 @@
       <button class="HeaderButton" id="Games" onclick="Games();">Gry</button>
     </div>
     <script>
-document.getElementById("HomeBtn").style.position = "static";
-document.getElementById("Apps").style.position = "static";
-document.getElementById("Games").style.position = "static";
+      setTimeout(function(){
+        document.getElementById("HomeBtn").style.position = "static";
+        document.getElementById("Apps").style.position = "static";
+        document.getElementById("Games").style.position = "static";
 
-document.getElementById("HomeBtn").style.display = "inline-block";
-document.getElementById("Apps").style.display = "inline-block";
-document.getElementById("Games").style.display = "inline-block";
+        document.getElementById("HomeBtn").style.display = "inline-block";
+        document.getElementById("Apps").style.display = "inline-block";
+        document.getElementById("Games").style.display = "inline-block";
+      }, 100);
     </script>
    </body>
 </html>
