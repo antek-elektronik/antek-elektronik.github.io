@@ -2,7 +2,7 @@
   width: 100%;
   height: 90px;
   display: block;
-  position: sticky;
+  position: fixed;
   border: solid 1px black;
   top: 0;
   left: 0;
@@ -10,7 +10,6 @@
   /*overflow:hidden;*/
   background-color: #bae5f7;
   padding: 2px;
-  z-index: 1;
 }
 .storeIcon{
   max-width: 75px;
