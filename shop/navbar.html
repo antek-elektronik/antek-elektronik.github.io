@@ -36,6 +36,25 @@
         document.getElementById("Games").style.transitionDuration = "0.5s";
         
       }, 300);
+
+      window.addEventListener('beforeunload', function(event) {
+        document.getElementById("HomeBtn").style.transitionDuration = "1s";
+        document.getElementById("Apps").style.transitionDuration = "1s";
+        document.getElementById("Games").style.transitionDuration = "1s";
+
+        document.getElementById("HomeBtn").style.width = "0px";
+        document.getElementById("Apps").style.width = "0px";
+        document.getElementById("Games").style.width = "0px";
+
+        //document.getElementById("HomeBtn").style.transitionDuration = "2s";
+        document.getElementById("HomeBtn").style.fontSize = "0px";
+        document.getElementById("Apps").style.fontSize = "0px";
+        document.getElementById("Games").style.fontSize = "0px";
+
+        document.getElementById("HomeBtn").style.transitionDuration = "0.5s";
+        document.getElementById("Apps").style.transitionDuration = "0.5s";
+        document.getElementById("Games").style.transitionDuration = "0.5s";
+      });
     </script>
    </body>
 </html>
