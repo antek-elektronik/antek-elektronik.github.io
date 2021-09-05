@@ -38,7 +38,7 @@
         
       }, 300);
 
-      window.addEventListener('beforeunload', function(event) {
+      window.addEventListener('unload', function(event) {
         document.getElementById("HomeBtn").style.transitionDuration = "1s";
         document.getElementById("Apps").style.transitionDuration = "1s";
         document.getElementById("Games").style.transitionDuration = "1s";
@@ -55,9 +55,8 @@
         document.getElementById("HomeBtn").style.transitionDuration = "0.5s";
         document.getElementById("Apps").style.transitionDuration = "0.5s";
         document.getElementById("Games").style.transitionDuration = "0.5s";
-        setTimeout(function(){
-          //do what you need here after defined amount of time
-        }, 2000);
+      
+        Sleep(1000);
       });
     </script>
    </body>
