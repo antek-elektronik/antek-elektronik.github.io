@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Antek's Store</title>
+    <link href="https:\\antek-gzara-animations.github.io\resources\logo2.png" rel="icon" />
+    <!--<link href="https:\\antek-gzara-animations.github.io\resources\CSS\HeaderBar.css" rel="stylesheet" />-->
+    <link href="https:\\antek-gzara-animations.github.io\resources\CSS\imageSizes.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div id="HeaderBar"></div>
+    
+    <h1 class="ItemHeaderName">
+      Gadające Emoji
+    </h1>
+    <p class="content">
+      Program tworzy na pulpicie emoji. Po naciśnięciu prawego przycisku pojawiają się opcje takie jak emocje buźki czy syntezator mowy.
+      <br>
+      <img src="https:\\antek-gzara-animations.github.io\resources\MediaController\logo.png" class="image" />
+      <br>
+      <img src="https:\\antek-gzara-animations.github.io\resources\MediaController\image1.png" class="imageHorizontal" />
+      <br>
+      <button class="downloadButton" onclick="download();">
+        <img src="https:\\antek-gzara-animations.github.io\resources\windowsLogo.png" class="downloadImage" />
+        Pobierz instalator Windows
+      </button>
+      <button class="downloadButton" onclick="Home();" style="margin-top: 20px;">
+        <img src="https:\\antek-gzara-animations.github.io\resources\house.png" class="downloadImage" />
+        Powrót
+      </button>
+    </p>
+
+
+    <script>
+      function download(){
+        window.open("https://antek-gzara-animations.github.io/resources/MediaController/download.rar");
+      }
+      function ErrorMessage(){
+        alert("aplikacja aktualnie nie dostępna");
+      }
+    </script>
+
+    <script src="https://antek-gzara-animations.github.io/shop/navButtons.js"></script>
+
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+      //load header bar
+      $(function(){
+        $("#HeaderBar").load("https:\\\\antek-gzara-animations.github.io\\shop\\navbar.html");
+      });
+    </script>
+  </body>
+</html>
