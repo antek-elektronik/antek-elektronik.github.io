@@ -10,7 +10,7 @@ function Games(){
 
 let titleState = false;
 
-setInterval(1000, function(){
+var titleInteral = window.setInterval(1000, function(){
   if(titlestate){
     document.getElementById("title").innerHTML = "test";
     titleState = false;
