@@ -10,7 +10,7 @@ function Games(){
 
 let titleState = false;
 
-var titleInteral = window.setInterval(1000, function(){
+var titleInteral = window.setInterval(function(){
   if(titlestate){
     document.getElementById("title").innerHTML = "test";
     titleState = false;
@@ -19,4 +19,4 @@ var titleInteral = window.setInterval(1000, function(){
     document.getElementById("title").innerHTML = "Antek's store";
     titloestate = true;
   }
-});
+}, 1000);
