@@ -23,7 +23,7 @@ var titleInteral = window.setInterval(function(){
 
 var clickSound = new Audio('https:\\\\antek-gzara-animations.github.io\\resources\\audio\\click.mp3');
 
-window.addEventListener("click", playClickSound()​);​
+window.addEventListener("click", playClickSound);​
 
 function playClickSound(){
   clickSound.play();
