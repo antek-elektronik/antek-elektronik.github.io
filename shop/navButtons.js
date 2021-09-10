@@ -8,6 +8,7 @@ function Games(){
   window.location.href = "https:\\\\antek-gzara-animations.github.io\\shop\\games";
 }
 
+/*
 let titleState = false;
 
 var titleInteral = window.setInterval(function(){
@@ -28,3 +29,4 @@ window.addEventListener("click", playClickSound);​
 function playClickSound(){
   clickSound.play();
 }
+*/
