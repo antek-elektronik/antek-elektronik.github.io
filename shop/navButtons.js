@@ -11,12 +11,12 @@ function Games(){
 let titleState = false;
 
 var titleInteral = window.setInterval(function(){
-  if(titlestate){
+  if(titleState){
     document.getElementById("title").innerHTML = "test";
     titleState = false;
   }
   else{
     document.getElementById("title").innerHTML = "Antek's store";
-    titloestate = true;
+    titloeState = true;
   }
 }, 1000);
