@@ -17,6 +17,6 @@ var titleInteral = window.setInterval(function(){
   }
   else{
     document.getElementById("title").innerHTML = "Antek's store";
-    titloeState = true;
+    titleState = true;
   }
 }, 1000);
