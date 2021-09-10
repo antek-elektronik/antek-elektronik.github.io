@@ -12,11 +12,17 @@ let titleState = false;
 
 var titleInteral = window.setInterval(function(){
   if(titleState){
-    document.getElementById("title").innerHTML = "";
+    document.getElementById("title").innerHTML = " ";
     titleState = false;
   }
   else{
     document.getElementById("title").innerHTML = "Antek's store";
     titleState = true;
   }
-}, 1000);
+}, 2000);
+
+var clickSound = new Audio('https:\\\\antek-gzara-animations.github.io\\resources\\audio\\click.mp3');
+
+document.getElementsByTagName("button").addEventListener("click", function() {
+  clickSound.play();
+}​);​
