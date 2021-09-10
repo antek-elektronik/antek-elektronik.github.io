@@ -12,7 +12,7 @@ let titleState = false;
 
 var titleInteral = window.setInterval(function(){
   if(titleState){
-    document.getElementById("title").innerHTML = "test";
+    document.getElementById("title").innerHTML = "";
     titleState = false;
   }
   else{
