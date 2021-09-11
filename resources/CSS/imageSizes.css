@@ -51,6 +51,16 @@
   margin-bottom: 10px;
 }
 
+.customSize{ 
+  display: inline-block;
+
+  border: solid 2px black;
+  border-radius: 5px;
+
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 
 .downloadImage{
   display: inline-block;
