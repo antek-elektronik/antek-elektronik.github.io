@@ -35,6 +35,10 @@
         <img src="https:\\antek-gzara-animations.github.io\resources\house.png" class="downloadImage" />
         Powrót
       </button>
+      <button class="downloadButton" onclick="sourceCode();" style="margin-top: 20px;">
+        <img src="https:\\antek-gzara-animations.github.io\resources\GitLogo.png" class="downloadImage" />
+        kod żródłowy
+      </button>
     </p>
 
 
@@ -44,6 +48,12 @@
       }
       function ErrorMessage(){
         alert("aplikacja aktualnie nie dostępna");
+      }
+      function NoSourceCode(){
+        alert("source code not available");
+      }
+      function sourceCode(){
+        NoSourceCode();
       }
     </script>
 
