@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title id="title">Antek's Store</title>
+    <link href="https:\\antek-gzara-animations.github.io\resources\logo2.png" rel="icon" />
+    <!--<link href="https:\\antek-gzara-animations.github.io\resources\CSS\HeaderBar.css" rel="stylesheet" />-->
+    <link href="https:\\antek-gzara-animations.github.io\resources\CSS\imageSizes.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div id="HeaderBar"></div>
+    
+    <h1 class="ItemHeaderName">
+        Mouseclick Sound
+    </h1>
+    <p class="content">
+        <b>Mouseclick Sound</b> to mały program podkładający dźwięk pod każde kliknięcie myszą lub przycisku na klawiaturze.
+      <br>
+      <img src="https:\\antek-gzara-animations.github.io\resources\MouseclickSound\logo.png" class="image" />
+      <br>
+      <img src="https:\\antek-gzara-animations.github.io\resources\MouseclickSound\image1.png" class="imageRectangle" />
+      <br>
+      <button class="downloadButton" onclick="download();">
+        <img src="https:\\antek-gzara-animations.github.io\resources\windowsLogo.png" class="downloadImage" />
+        Pobierz instalator Windows
+      </button>
+      <button class="downloadButton" onclick="Home();" style="margin-top: 20px;">
+        <img src="https:\\antek-gzara-animations.github.io\resources\house.png" class="downloadImage" />
+        Powrót
+      </button>
+      <button class="downloadButton" onclick="sourceCode();" style="margin-top: 20px;">
+        <img src="https:\\antek-gzara-animations.github.io\resources\GitLogo.png" class="downloadImage" />
+        kod żródłowy
+      </button>
+    </p>
+
+
+    <script>
+      function download(){
+        //window.open("https://antek-gzara-animations.github.io/resources/MouseClickSound/download.rar");
+        ErrorMessage();
+      }
+      function ErrorMessage(){
+        alert("aplikacja aktualnie nie dostępna");
+      }
+      function NoSourceCode(){
+        alert("source code not available");
+      }
+      function sourceCode(){
+        //NoSourceCode();
+        window.open("https://github.com/Antek-Gzara-Animations/MouseClick-sound");
+      }
+    </script>
+
+    <script src="https://antek-gzara-animations.github.io/shop/navButtons.js"></script>
+
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+      //load header bar
+      $(function(){
+        $("#HeaderBar").load("https:\\\\antek-gzara-animations.github.io\\shop\\navbar.html");
+      });
+    </script>
+  </body>
+</html>
