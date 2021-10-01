@@ -1,0 +1,53 @@
+.headerDiv{
+  width: 100%;
+  height: 90px;
+  display: block;
+  position: fixed;
+  border: solid 1px black;
+  top: 0;
+  left: 0;
+  margin-bottom: 10px;
+  /*overflow:hidden;*/
+  background-color: #bae5f7;
+  padding: 2px;
+}
+.storeIcon{
+  max-width: 75px;
+  /*height: 70px;*/
+  display: inline-block;
+  border: solid 1px black;
+  border-radius: 50px;
+  background-color: #b5e5fa;
+}
+.StoreName{
+  font-size: 45px;
+  display: inline-block;
+  transform: translateY(-50%);
+  top: 50%;
+}
+.HeaderButton{
+  font-size: 0px;
+  height: 60px;
+  width: 0px;
+  position: static;
+  margin-top: 10px;
+  margin-left: 20px;
+  transform: translateY(-50%);
+  top: 50%;
+  border: solid 3px #3bd188;
+  color: white;
+  background-color: #42f59e;
+  transition-duration: 0.5s;
+  display: inline-block;
+}
+.HeaderButton:hover{
+  color: #3bd188;
+  background-color: transparent;
+  border-color: #3bd188;
+  border-radius: 30px;
+  border-width: 3px;
+}
+
+body{
+  background-color: #cfedfa;
+}
