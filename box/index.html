@@ -1,0 +1,136 @@
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+        <title>website</title>
+        <meta charset="utf-8" />
+        <style>
+            body{
+                background-color: black;
+            }
+
+            .box{
+                display: block;
+                width: 100px;
+                height: 100px;
+                color: white;
+                background-color: red;
+                margin-left: 5%;
+                transition-duration: 2s;
+                text-align: center;
+                
+                font-size: 0px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <a onclick="stop();">
+        <div class="box" id="box1"></div> <br>
+        <div class="box" id="box2"></div> <br>
+        <div class="box" id="box3"></div> <br>
+        <div class="box" id="box4"></div> <br>
+        <div class="box" id="box5"></div> <br>
+        <div class="box" id="box6"></div> <br>
+        <div class="box" id="box7"></div> <br>
+        <div class="box" id="box8"></div> <br>
+        <div class="box" id="box9"></div> <br>
+        <div class="box" id="box10"></div> <br>
+        <div class="box" id="box11">BOX</div><br>
+        <!--<div class="box" id="box12"></div> <br>-->
+    </a>
+
+        <script type="text/javascript">
+
+            ChangePosition();
+
+            var ChangePositionInterval  = setInterval(ChangePosition, 3000);
+            var position = true;
+            var Stopped = false;
+
+
+            function ChangePosition(){
+                if(position){
+                    document.getElementById("box1").style.marginLeft = "95%";
+                    document.getElementById("box2").style.marginLeft = "5%";
+                    document.getElementById("box3").style.marginLeft = "95%";
+                    document.getElementById("box4").style.marginLeft = "5%";
+                    document.getElementById("box5").style.marginLeft = "95%";
+                    document.getElementById("box6").style.marginLeft = "5%";
+                    document.getElementById("box7").style.marginLeft = "95%";
+                    document.getElementById("box8").style.marginLeft = "5%";
+                    document.getElementById("box9").style.marginLeft = "95%";
+                    document.getElementById("box10").style.marginLeft = "5%";
+                    document.getElementById("box11").style.marginLeft = "95%";
+                    //document.getElementById("box12").style.marginLeft = "5%";
+                    position = false;
+                }
+                else{
+                    document.getElementById("box1").style.marginLeft = "5%";
+                    document.getElementById("box2").style.marginLeft = "95%";
+                    document.getElementById("box3").style.marginLeft = "5%";
+                    document.getElementById("box4").style.marginLeft = "95%";
+                    document.getElementById("box5").style.marginLeft = "5%";
+                    document.getElementById("box6").style.marginLeft = "95%";
+                    document.getElementById("box7").style.marginLeft = "5%";
+                    document.getElementById("box8").style.marginLeft = "95%";
+                    document.getElementById("box9").style.marginLeft = "5%";
+                    document.getElementById("box10").style.marginLeft = "95%";
+                    document.getElementById("box11").style.marginLeft = "5%";
+                    //document.getElementById("box12").style.marginLeft = "95%";
+                    position = true;
+                }
+
+            }
+
+            function stop(){
+                if(Stopped){
+                    document.getElementById("box1").style.height = "0px";
+                    document.getElementById("box2").style.height = "0px";
+                    document.getElementById("box3").style.height = "0px";
+                    document.getElementById("box4").style.height = "0px";
+                    document.getElementById("box5").style.height = "0px";
+                    document.getElementById("box6").style.height = "0px";
+                    document.getElementById("box7").style.height = "0px";
+                    document.getElementById("box8").style.height = "0px";
+                    document.getElementById("box9").style.height = "0px";
+                    document.getElementById("box10").style.height = "0px";
+                    document.getElementById("box11").style.height = "0px";
+
+                    setTimeout(() => {
+                        
+                        document.getElementById("box11").style.height = "100px"; 
+                        setTimeout(() => {
+                        
+                        document.getElementById("box11").style.fontSize = "30px";
+                    
+                        }, 3000); 
+                    }, 3000); 
+                }else{
+                    clearInterval(ChangePositionInterval);
+                    document.getElementById("box1").style.marginLeft = "50%";
+                    document.getElementById("box2").style.marginLeft = "50%";
+                    document.getElementById("box3").style.marginLeft = "50%";
+                    document.getElementById("box4").style.marginLeft = "50%";
+                    document.getElementById("box5").style.marginLeft = "50%";
+                    document.getElementById("box6").style.marginLeft = "50%";
+                    document.getElementById("box7").style.marginLeft = "50%";
+                    document.getElementById("box8").style.marginLeft = "50%";
+                    document.getElementById("box9").style.marginLeft = "50%";
+                    document.getElementById("box10").style.marginLeft = "50%";
+                    document.getElementById("box11").style.marginLeft = "50%";
+                    //document.getElementById("box12").style.marginLeft = "50%";
+                    Stopped = true;
+                }
+            }
+
+            
+
+/*
+            ChangePositionInterval = window.setInterval(ChangePosition(),2000);
+            ResetPositionInterval = window.setInterval(ResetPosition(), 1000); 
+*/
+            
+        </script>
+    </body>
+</html>
