@@ -38,6 +38,33 @@ body{
 
 <button onclick="ButtonClick();" id="btn">click me</button>
 <script>
+var number = 0;
+
+function ButtonClick(){
+	number++;
+	document.getElementById("btn").style.width = "0px";
+  document.getElementById("btn").style.height = "0px";
+  document.getElementById("btn").style.fontSize = "0px";
+  setTimeout(() =>{
+  document.getElementById("btn").style.display = "none";
+  }, 300);
+  //document.getElementById("btn").style.borderColor = "black";
+    setTimeout(() => {
+    	document.getElementById("text").style.fontSize = "0px";
+    			setTimeout(() => {
+    				document.getElementById("text").style.fontSize = "50px";
+            	document.getElementById("btn").style.width = "300px";
+  						document.getElementById("btn").style.height = "150px";
+  						document.getElementById("btn").style.fontSize = "50px";
+              document.getElementById("btn").style.display = "inline-block";
+              //document.getElementById("btn").style.borderColor = "red";
+              document.getElementById("text").innerHTML = number;
+    				},1000);
+  		}, 200);
+      
+      
+   
+}
 </script>
 </body>
 </html> 
