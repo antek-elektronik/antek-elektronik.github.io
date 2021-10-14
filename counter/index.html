@@ -54,13 +54,11 @@ function ButtonClick(){
   	}, 300);
 	
     	setTimeout(() => {
+		document.getElementById("btn").style.display = "inline-block";
     		document.getElementById("text").style.fontSize = "50px";
             	document.getElementById("btn").style.width = "300px";
   		document.getElementById("btn").style.height = "150px";
   		document.getElementById("btn").style.fontSize = "50px";
-		setTimeout(() =>{
-              		document.getElementById("btn").style.display = "inline-block";
-		}, 300);
               
               	document.getElementById("text").innerHTML = number;
     	,1000);
