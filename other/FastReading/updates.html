@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <script>
+            let IsUpdateAvailable = false; //change this if update for app is available or not available
+        </script>
+
+        <style>
+            .available{
+                width: 100vw;
+                background-color: #4aff4a;
+                color: #299c25;
+                border: solid 2px #299c25;
+                border-radius: 10px;
+                padding: 50px;
+                font-size: 30px;
+                text-align: center;
+            }
+            .notAvailable{
+                width: 100vw;
+                background-color: #ff654a;
+                border: solid 2px #9c2525;
+                border-radius: 10px;
+                padding: 30px;
+                font-size: 30px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="UpdateDIVIframe">
+            no updates available
+        </div>
+
+        <script>
+            if(IsUpdateAvailable){
+                document.getElementById("UpdateDIVIframe").className = "available";
+                document.getElementById("UpdateDIVIframe").innerHTML = "updates available"; 
+            }
+            else
+            {
+                document.getElementById("UpdateDIVIframe").className = "notAvailable";
+                document.getElementById("UpdateDIVIframe").innerHTML = "no updates available";
+            }
+        </script>
+    </body>
+</html>
