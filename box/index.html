@@ -48,39 +48,36 @@
             var position = true;
             var Stopped = false;
             
-            var boxes;
-            boxes = document.getElementsByClassName("box");
-
 
             function ChangePosition(){
                 if(position){
-                    var BufferBool = false;
-                    var i = 0;
-                    for(; i < boxes.length; i++){
-                        if(BufferBool){
-                            bufferBool = false;
-                            boxes.item[i].style.marginLeft = "95%";
-                        }
-                        else{
-                            bufferBool = true;
-                            boxes.item[i].style.marginLeft = "5%";
-                        }
-                    }
+                    document.getElementById("box1").style.marginLeft = "95%";
+                    document.getElementById("box2").style.marginLeft = "5%";
+                    document.getElementById("box3").style.marginLeft = "95%";
+                    document.getElementById("box4").style.marginLeft = "5%";
+                    document.getElementById("box5").style.marginLeft = "95%";
+                    document.getElementById("box6").style.marginLeft = "5%";
+                    document.getElementById("box7").style.marginLeft = "95%";
+                    document.getElementById("box8").style.marginLeft = "5%";
+                    document.getElementById("box9").style.marginLeft = "95%";
+                    document.getElementById("box10").style.marginLeft = "5%";
+                    document.getElementById("box11").style.marginLeft = "95%";
+                    //document.getElementById("box12").style.marginLeft = "5%";
                     position = false;
                 }
                 else{
-                    var BufferBool = true;
-                    var i = 0;
-                    for(; i < boxes.length; i++){
-                        if(BufferBool){
-                            bufferBool = false;
-                            boxes.item[i].style.marginLeft = "95%";
-                        }
-                        else{
-                            bufferBool = true;
-                            boxes.item[i].style.marginLeft = "5%";
-                        }
-                    }
+                    document.getElementById("box1").style.marginLeft = "5%";
+                    document.getElementById("box2").style.marginLeft = "95%";
+                    document.getElementById("box3").style.marginLeft = "5%";
+                    document.getElementById("box4").style.marginLeft = "95%";
+                    document.getElementById("box5").style.marginLeft = "5%";
+                    document.getElementById("box6").style.marginLeft = "95%";
+                    document.getElementById("box7").style.marginLeft = "5%";
+                    document.getElementById("box8").style.marginLeft = "95%";
+                    document.getElementById("box9").style.marginLeft = "5%";
+                    document.getElementById("box10").style.marginLeft = "95%";
+                    document.getElementById("box11").style.marginLeft = "5%";
+                    //document.getElementById("box12").style.marginLeft = "95%";
                     position = true;
                 }
 
@@ -88,10 +85,18 @@
 
             function stop(){
                 if(Stopped){
-                    var i = 0;
-                    for(; i < boxes.length; i++){
-                        boxes[i].style.marginLeft = "0%";
-                    }
+                    document.getElementById("box1").style.height = "0px";
+                    document.getElementById("box2").style.height = "0px";
+                    document.getElementById("box3").style.height = "0px";
+                    document.getElementById("box4").style.height = "0px";
+                    document.getElementById("box5").style.height = "0px";
+                    document.getElementById("box6").style.height = "0px";
+                    document.getElementById("box7").style.height = "0px";
+                    document.getElementById("box8").style.height = "0px";
+                    document.getElementById("box9").style.height = "0px";
+                    document.getElementById("box10").style.height = "0px";
+                    document.getElementById("box11").style.height = "0px";
+
 
                     setTimeout(() => {
                         
@@ -105,16 +110,25 @@
                 }else{
                     clearInterval(ChangePositionInterval);
                     
-                    var i = 0;
-                    for(; i < boxes.length; i++){
-                        boxes[i].style.marginLeft = "50%";
-                    }
+                    document.getElementById("box1").style.marginLeft = "50%";
+                    document.getElementById("box2").style.marginLeft = "50%";
+                    document.getElementById("box3").style.marginLeft = "50%";
+                    document.getElementById("box4").style.marginLeft = "50%";
+                    document.getElementById("box5").style.marginLeft = "50%";
+                    document.getElementById("box6").style.marginLeft = "50%";
+                    document.getElementById("box7").style.marginLeft = "50%";
+                    document.getElementById("box8").style.marginLeft = "50%";
+                    document.getElementById("box9").style.marginLeft = "50%";
+                    document.getElementById("box10").style.marginLeft = "50%";
+                    document.getElementById("box11").style.marginLeft = "50%";
+                    //document.getElementById("box12").style.marginLeft = "50%";
+
                     Stopped = true;
                 }
             }
 
             
-
+/*
             window.addEventListener('keypress',function (evt) {
             switch (evt.keyCode) {
                 case 32:
@@ -122,7 +136,7 @@
                 break;
                 }
             }, false);
-
+*/
 /*
             ChangePositionInterval = window.setInterval(ChangePosition(),2000);
             ResetPositionInterval = window.setInterval(ResetPosition(), 1000); 
