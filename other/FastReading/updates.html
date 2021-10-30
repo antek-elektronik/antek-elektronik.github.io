@@ -13,7 +13,7 @@
                 color: #299c25;
                 border: solid 2px #299c25;
                 border-radius: 10px;
-                padding: 50px;
+                padding: 30px;
                 font-size: 30px;
                 text-align: center;
             }
@@ -29,20 +29,29 @@
         </style>
     </head>
     <body>
-        <div id="UpdateDIVIframe">
+        <div id="availableDIV" class="available" style="display: none;">
+            updates available
+        </div>
+        <div id="notAvailableDIV" class="notAvailable">
             no updates available
         </div>
 
+        <!--<button onclick="if(IsUpdateAvailable){ IsUpdateAvailable = false; } else { IsUpdateAvailable = true; } update();" >dgdsgds</button>-->
+
         <script>
-            if(IsUpdateAvailable){
-                document.getElementById("UpdateDIVIframe").className = "available";
-                document.getElementById("UpdateDIVIframe").innerHTML = "updates available"; 
+            function update(){
+                if(IsUpdateAvailable){
+                    document.getElementById("availableDIV").style.display = "block";
+                    document.getElementById("notAvailableDIV").style.display = "none";
+                }
+                else
+                {
+                    document.getElementById("availableDIV").style.display = "none";
+                    document.getElementById("notAvailableDIV").style.display = "block";
+                }
             }
-            else
-            {
-                document.getElementById("UpdateDIVIframe").className = "notAvailable";
-                document.getElementById("UpdateDIVIframe").innerHTML = "no updates available";
-            }
+
+            update();
         </script>
     </body>
 </html>
