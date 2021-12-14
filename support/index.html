@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Support</title>
+        <style>
+            .header{
+                font-size: 40px;
+                text-align: center;
+            }
+            .images{
+                text-align: center;
+                margin-top: 30px;
+            }
+            .image{
+                border: solid 2px black;
+                border-radius: 20px;
+                width: 640px;
+                height: 320px;
+                margin: 15px;
+                transition-duration: 0.5s;
+                transition-delay: 0.1s;
+            }
+            .image:hover{
+                width: 680px;
+                height: 360px;
+                box-shadow: 4px 2px 1em rgb(0, 174, 255);
+            }
+            body{
+                background: linear-gradient(90deg,gray 10%, white 90%);
+            }
+        </style>
+    </head>
+    <body>
+        <p class="header">
+            Select your language
+            <br>
+            Wybierz swój język
+        </p>
+        <div class="images">
+            <img src="britishFlag.png" class="image" onclick="window.location = 'eng';"/>
+            <img src="polandFlag.png" class="image" onclick="window.location = 'pl';"/>
+        </div>
+    </body>
+</html>
