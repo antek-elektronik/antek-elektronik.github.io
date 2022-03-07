@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Gra matematyczna</title>
+
+        <style type="text/css">* { padding: 0; margin: 0; }</style>
+
+        <style>
+            body{
+                text-align: center;
+            }
+
+            .title{
+                top: 0;
+                left: 0;
+
+                padding: 20px;
+                width: 50%;
+                height: auto;
+                background-color: rgb(168, 168, 168);
+                color: white;
+                border: solid 4px rgb(155, 154, 154);
+                border-radius: 10px;
+                font-weight: bold;
+                font-size: 40px;
+                text-align: center;
+                display: inline-block;
+                transition-duration: 300ms;
+                text-align: center;
+            }
+
+            .titleElement:hover{
+                color: rgb(66, 148, 214);
+                margin: 3px;
+            }
+            .titleElement{
+                transition-duration: 300ms;
+                margin: 0;
+                padding: 0;
+                display: inline;
+                cursor: default;
+            }
+
+            .mathElement{
+                width: 100%;
+                text-align: center;
+                margin-bottom: 30px;
+                margin-top: 30px;
+                
+            }
+
+            .mathElementChild{
+                top: 0;
+                left: 0;
+
+                width: 50%;
+                height: auto;
+                background-color: rgb(168, 168, 168);
+                color: white;
+                border: solid 4px rgb(155, 154, 154);
+                border-radius: 10px;
+                font-weight: bold;
+                font-size: 30px;
+                text-align: center;
+                display: inline-block;
+            }
+            .wrong{
+                background-color: rgb(209, 4, 4);
+                color: white;
+                visibility: hidden;
+                width: 0%;
+                height: auto;
+                transition-duration: 300ms;
+                border: solid 4px rgba(165, 1, 1, 0.986);
+                border-radius: 10px;
+                font-weight: bold;
+                font-size: 30px;
+                text-align: center;
+                display: inline-block;
+                margin-top: 30px;
+                margin-bottom: 30px;
+                text-overflow: ellipsis;
+            }
+
+            .correct{
+                background-color: rgb(4, 209, 4);
+                color: white;
+                visibility: hidden;
+                width: 0%;
+                height: auto;
+                transition-duration: 300ms;
+                border: solid 4px rgba(6, 165, 1, 0.986);
+                border-radius: 10px;
+                font-weight: bold;
+                font-size: 30px;
+                text-align: center;
+                display: inline-block;
+                margin-top: 30px;
+                margin-bottom: 30px;
+                text-overflow: ellipsis;
+            }
+
+            @-webkit-keyframes correct{
+                from{
+
+                }
+                to {
+                    width: 50%;
+                }
+            }
+
+            .answerButton{
+                top: 0;
+                left: 0;
+
+                width: 50%;
+
+                height: auto;
+                background-color: rgb(168, 168, 168);
+                color: white;
+                border: solid 4px rgb(155, 154, 154);
+                border-radius: 10px;
+
+                font-size: 30px;
+                text-align: center;
+
+                position: relative;
+                display: inline-block;
+                transition-duration: 300ms;
+            }
+            .answerButton:focus{
+                border-color: black;
+                width: 52%;
+            }
+
+            .answerButton:hover{
+                font-size: 35px;
+                width: 52%;
+            }
+
+            .numberInput{
+                margin-bottom: 30px;
+                width: 0%;
+                height: 30px;
+                text-align: center;
+                
+                -webkit-animation: correct 0.5s forwards;
+                -webkit-animation-delay: 0.5s;
+            }
+
+            .reloadButton{
+                visibility: hidden;
+                top: 0;
+                left: 0;
+
+                width: 50%;
+
+                height: auto;
+                background-color: rgb(168, 168, 168);
+                color: white;
+                border: solid 4px rgb(155, 154, 154);
+                border-radius: 10px;
+
+                font-size: 30px;
+                text-align: center;
+
+                position: relative;
+                display: inline-block;
+                transition-duration: 300ms;
+            }
+            .reloadButton:focus{
+                border-color: black;
+                width: 52%;
+            }
+
+            .reloadButton:hover{
+                font-size: 35px;
+                width: 52%;
+            }
+
+            .bottomBar{
+                position: fixed;
+                bottom: 0;
+                width: 100vw;
+                height: 50px;
+                background-color: rgb(230, 230, 230); 
+                transition-duration: 300ms;   
+            }
+            .bottomTitle{
+                color: rgb(172, 172, 172);
+                font-weight: bold;
+                font-size: 15px;
+                right: 10px;
+                bottom: 10px;
+                position: fixed;
+                transition-duration: 300ms;
+            }
+            .bottomLink{
+                color: rgb(172, 172, 172);
+                font-weight: bold;
+                font-size: 15px;
+                margin-top: 40px;
+                margin-left: 10px;
+                text-decoration: none;
+                transition-duration: 300ms;
+            }
+            .bottomLink:hover{
+                text-decoration: underline;
+            }
+            .bottomLinks{
+                position: fixed;
+                bottom: 10px;
+            }
+            .bottomLetter:hover{
+                color: rgb(66, 148, 214);
+                margin: 3px;
+            }
+            .bottomLetter{
+                margin: 0;
+                padding: 0;
+                display: inline;
+                cursor: default;
+                transition-duration: 300ms;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <!-- <h1 class="title">gra matematyczna - tabliczka mnożenia</h1> OLD -->
+
+        <table class="title">
+            <th class="titleElement">g</th>
+            <th class="titleElement">r</th>
+            <th class="titleElement">a</th>
+            <th class="titleElement"> </th>
+            <th class="titleElement">m</th>
+            <th class="titleElement">a</th>
+            <th class="titleElement">t</th>
+            <th class="titleElement">e</th>
+            <th class="titleElement">m</th>
+            <th class="titleElement">a</th>
+            <th class="titleElement">t</th>
+            <th class="titleElement">y</th>
+            <th class="titleElement">c</th>
+            <th class="titleElement">z</th>
+            <th class="titleElement">n</th>
+            <th class="titleElement">a</th>
+            <th class="titleElement"> </th>
+            <th class="titleElement">-</th>
+            <th class="titleElement"> </th>
+            <th class="titleElement">t</th>
+            <th class="titleElement">a</th>
+            <th class="titleElement">b</th>
+            <th class="titleElement">i</th>
+            <th class="titleElement">c</th>
+            <th class="titleElement">z</th>
+            <th class="titleElement">k</th>
+            <th class="titleElement">a</th>
+            <th class="titleElement"> </th>
+            <th class="titleElement">m</th>
+            <th class="titleElement">n</th>
+            <th class="titleElement">o</th>
+            <th class="titleElement">ż</th>
+            <th class="titleElement">e</th>
+            <th class="titleElement">n</th>
+            <th class="titleElement">i</th>
+            <th class="titleElement">a</th>
+        </table>
+
+        <div class="mathElement">
+            <div class="mathElementChild">
+                <p id="mathElement">mathElement</p>
+            </div>
+        </div>
+        
+        <div>
+            <input class="numberInput" id="numberInput" type="text" placeholder="tutaj wpisz swoją odpowiedź!" /> <br />
+            <button onclick="submitAnswer();" class="answerButton">zatwierdź</button>
+        </div>
+
+        <div>
+            
+            <div class="wrong" id="wrong">
+                niepoprawna odpowiedź
+                
+            </div>
+            <div class="correct" id="correct">
+                poprawna odpowiedź
+                
+            </div>
+
+            <br>
+
+            <button onclick="reloadPage();" id="reloadbutton" class="reloadButton">dalej</button>
+        </div>
+
+        <div class="bottomBar" >
+            <div class="bottomLinks">
+                <a class="bottomLink" href="https://www.tiktok.com/@youngdevpl">@YoungDevPl</a>
+                <a class="bottomLink" href="https://www.instagram.com/antek_gzara_animations/">@antek_gzara_animations</a>
+                <a class="bottomLink" href="https://github.com/Antek-Gzara-Animations">view source on github!</a>
+            </div>
+
+            
+                <table class=bottomTitle>
+                    <th class="bottomLetter">A</th>
+                    <th class="bottomLetter">n</th>
+                    <th class="bottomLetter">t</th>
+                    <th class="bottomLetter">o</th>
+                    <th class="bottomLetter">n</th>
+                    <th class="bottomLetter">i</th>
+                    <th class="bottomLetter"> </th>
+                    <th class="bottomLetter">G</th>
+                    <th class="bottomLetter">z</th>
+                    <th class="bottomLetter">a</th>
+                    <th class="bottomLetter">r</th>
+                    <th class="bottomLetter">a</th>
+                    <th class="bottomLetter"> </th>
+                    <th class="bottomLetter">2</th>
+                    <th class="bottomLetter">0</th>
+                    <th class="bottomLetter">2</th>
+                    <th class="bottomLetter">2</th>
+                </table>
+            
+            
+        </div>
+
+        <script>
+            var number1 = 0;
+            var number2 = 0;
+            
+            var answered = false;
+            
+            number1 = getRandomInt(0,10);
+            number2 = getRandomInt(0,10);
+
+            document.getElementById("mathElement").innerHTML = number1.toString() + " • " + number2.toString() + " = ?";
+            window.setTimeout(function(){
+                document.getElementById("numberInput").focus();
+            }, 1000);
+            function submitAnswer() {
+                var userInput = document.getElementById("numberInput").value;
+                if(userInput == number1 * number2){
+                    document.getElementById("correct").style.visibility = "visible";
+                    document.getElementById("correct").style.width = "50%";
+                }
+                else{
+                    document.getElementById("wrong").style.visibility = "visible";
+                    document.getElementById("wrong").style.width = "50%";
+                }
+                document.getElementById("reloadbutton").style.visibility = "visible";
+                
+                window.setTimeout(function(){
+                    document.getElementById("reloadbutton").focus();
+                }, 500);
+            }
+
+            function getRandomInt(min, max) {
+                min = Math.ceil(min);
+                max = Math.floor(max);
+                return Math.floor(Math.random() * (max - min)) + min;
+            }
+
+            document.addEventListener("keypress", function(event) {
+                if (event.keyCode === 13 && !answered) {
+                    submitAnswer();
+                    answered = true;
+                }
+            });
+
+            function reloadPage(){
+                document.location.reload();
+            }
+        </script>
+
+
+
+    </body>
+</html>
