@@ -73,14 +73,24 @@
         </div>
 
         <script>
-            
-            document.getElementById("content").style.transitionDuration = "0ms";
-            document.getElementById("content").style.left = "100%";
+            function start(){
+                document.getElementById("content").style.transitionDuration = "0ms";
+                document.getElementById("content").style.left = "100%";
+                
+                if (document.readyState === 'complete') { 
+                    setTimeout(function(){
+                        document.getElementById("content").style.transitionDuration = "600ms";
+                        document.getElementById("content").style.left = "0px";
+                    }, 500);
+                }
+                else
+                {
+                    setTimeout(function(){start();}, 100);
+                }
+            }
 
-            setTimeout(function(){
-                document.getElementById("content").style.transitionDuration = "600ms";
-                document.getElementById("content").style.left = "0px";
-            }, 500);
+            start();
+            
 
             function redirect( InutUrl = "null"){
                 document.getElementById("content").style.left = "-100%";
@@ -94,7 +104,7 @@
                 });
             }
 
-            function start(element){
+            function fromRight(element){
             //document.getElementById("content").style.transitionDuration = "0ms";
             //document.getElementById("content").style.left = "100%";
             setTimeout(function(){
