@@ -7,13 +7,13 @@ polishCheckbox = document.getElementById("polishCheckbox");
 var language = "";
 
 if (document.cookie.split(';').some((item) => item.includes('language=polish'))) {
-    document.log("language is set to polish");
+    console.log("language is set to polish");
     language = "polish";
     polishCheckbox.checked = true;
 } else if (document.cookie.split(';').some((item) => item.includes('language=english'))) {
-    document.log("language is set to english");
+    console.log("language is set to english");
     language = "english";
-    englishCheckbox.checked = false;
+    englishCheckbox.checked = true;
 }
 else{
     console.error("developer fucked something up with cookies");
