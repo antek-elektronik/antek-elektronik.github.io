@@ -18,8 +18,15 @@
     margin:5px;
 }
 
-.navbar li{
+.navbar li[id="left"]{
     float: left;
+    
+}
+
+.navbar li[id="right"]{
+    float: right;
+    padding: 14px 16px;
+    color: white;
 }
 
 .navbar a{
@@ -28,8 +35,12 @@
     color: white;
     text-align: center;
     text-decoration: none;
+    transition-duration: 350ms;
+
 }
 
 .navbar a:hover{
     background-color: #111;
+    border-radius: 10px;
+    
 }

@@ -6,17 +6,26 @@
         <link rel="icon" href="https://antek-gzara-animations.github.io/resources/logo2.png" />
         <title>Homepage</title>
         <link rel="stylesheet" href="style.css">
-        <script src="script.js"></script>
     </head>
     <body>
             <ul class="navbar" id="navbar">
-                <li><img src="https://antek-gzara-animations.github.io/resources/FreshLogo4K.png" id="logo"></li>
-                <li><a href="">strona główna</a></li>
-                <li><a href="">artykuły</a></li>
-                <li><a href="">pliki do pobrania</a></li>
-                <li><a href="">kontakt</a></li>
+                <li id="left"><img src="https://antek-gzara-animations.github.io/resources/FreshLogo4K.png" id="logo"></li>
+                <li id="left"><a href="../homepage/">strona główna</a></li>
+                <li id="left"><a href="../articles/">artykuły</a></li>
+                <li id="left"><a href="../downloads/">pliki do pobrania</a></li>
+                <li id="left"><a href="../contact/">kontakt</a></li>
+                <li id="right">
+                    <input type="checkbox" id="englishCheckbox" value="english" name="english" />
+                    <label for="englishCheckbox">English</label>
+                    <input type="checkbox" id="polishCheckbox" value="polski" name="polish"/>
+                    <label for="polishCheckbox">Polski</label>
+                </li>
             </ul>
 
+
+
             <a>controll</a>
+
+            <script src="script.js"></script>
     </body>
 </html>
