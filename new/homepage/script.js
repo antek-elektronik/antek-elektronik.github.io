@@ -1,14 +1,25 @@
 //test
 console.log("Welcome to my website!");
 
-var polishCheckbox = document.getElementById("polishCheckbox");
+englishCheckbox = document.getElementById("englishCheckbox");
+polishCheckbox = document.getElementById("polishCheckbox");
 
-polishCheckbox.checked = true;
+var language = "";
 
-document.cookie = "test=hello";
-document.cookie = "language=polish";
+if (document.cookie.split(';').some((item) => item.includes('language=polish'))) {
+    document.log("language is set to polish");
+    language = "polish";
+    polishCheckbox.checked = true;
+} else if (document.cookie.split(';').some((item) => item.includes('language=english'))) {
+    document.log("language is set to english");
+    language = "english";
+    englishCheckbox.checked = false;
+}
+else{
+    console.error("developer fucked something up with cookies");
+}
 
-console.log(document.cookie);
+//console.log(document.cookie);
 
 //update logo size on navbar based on navbar height
 window.setInterval(function(){
@@ -18,4 +29,18 @@ window.setInterval(function(){
     //console.warn(navbarHeight) 
 }, 100);
 
-    
+function updateLanguage(){
+    if(polishCheckbox.checked == true){
+        console.log("language is changed to polish now");
+        language = "polish";
+        document.cookie = "language=polish";
+    }
+    else if(englishCheckbox.checked == true){
+        console.log("language is changed to english now");
+        language = "english";
+        document.cookie = "language=english";
+    }
+    else{
+        console.error("dev fucked something up again, this time with changing language");
+    }
+}
