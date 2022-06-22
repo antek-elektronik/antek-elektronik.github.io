@@ -28,6 +28,8 @@
                 text-align: center;
                 transition-duration: 600ms;
                 transition-delay: 50ms;
+
+                transform: rotate(30deg);
             }
             .header{
                 color: white;
@@ -58,6 +60,53 @@
                 font-size: 35px;
             }
 
+            .credits{
+                position: fixed;
+                bottom: 0;
+                width: 100%;
+                left: 0;
+                
+                background-color: transparent;
+            }
+
+            .credits a{
+                padding: 0;
+                margin: 0; 
+                position: fixed;
+                left: 20px;
+                color: gray;
+                text-decoration: none;
+                font-size: 15px;
+                transition-duration: 400ms;
+                cursor: pointer;
+                display: inline-block;
+                bottom:5px;
+            }
+            .credits a:hover{
+                font-size: 17px;
+                text-decoration: underline;
+            }
+
+            .credits p{
+                position: fixed;
+                padding: 0;
+                margin: 0; 
+                right: 20px;
+                bottom: 5px;
+                color: gray;
+                text-decoration: none;
+                font-size: 15px;
+                transition-duration: 400ms;
+                cursor: help;
+                
+            }
+
+
+            .credits p:hover{
+                font-size: 18px;
+                
+            }
+
         </style>
 
     </head>
@@ -69,7 +118,12 @@
             </p>
 
             <p class="subheader">spis treści na stronie:</p>
-            <button class="button" onclick="redirect('\\prezentacja\\index.html');">prezentacja</button>
+            <button class="button" onclick="redirect('prezentacja\\index.html');">prezentacja</button>
+        </div>
+
+        <div class="credits">
+            <a>github</a>
+            <p>Antonii Gzara 2022</p>
         </div>
 
         <script>
@@ -81,6 +135,14 @@
                     setTimeout(function(){
                         document.getElementById("content").style.transitionDuration = "600ms";
                         document.getElementById("content").style.left = "0px";
+                        setTimeout(function(){
+                            document.getElementById("content").style.transitionDuration = "500ms";
+                            document.getElementById("content").style.transform = "rotate(-30deg)";
+                            setTimeout(function(){
+                                document.getElementById("content").style.transform = "rotate(0deg)";
+                            }, 300);
+
+                        }, 400);
                     }, 500);
                 }
                 else
@@ -92,16 +154,21 @@
             start();
             
 
-            function redirect( InutUrl = "null"){
+            function redirect(InputUrl){
+                document.getElementById("content").style.transitionDuration = "500ms";
+                document.getElementById("content").style.transform = "rotate(30deg)";
+
+                document.getElementById("content").style.transitionDuration = "600ms";
                 document.getElementById("content").style.left = "-100%";
+                
                 setTimeout(function(){
-                    if(InputUrl != "null"){
+                    if(InputUrl != null){
                         window.location = InputUrl;
                     }
                     else{
                         console.warn("url not set");
                     }
-                });
+                }, 700);
             }
 
             function fromRight(element){
