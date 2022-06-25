@@ -87,6 +87,38 @@
     bottom: 10px;
     background-color: #c0c1c2;
     padding: 10px;
+    border: 2px solid #919192;
+    border-radius: 10px;
 
     transition-duration: 250ms;
+    font-family: 'Noto Serif', serif;
+    
+}
+
+.cookiesInfo button{
+    padding: 10px 15px;
+    transition-duration: 300ms;
+    transition-property: all;
+    border: solid 2px #7dbeff;
+    background-color: #a6d2fe;
+
+    
+}
+.cookiesInfo button:hover{
+    background-color: #72b3f5;
+    border-color: #3f9fff;
+    border-radius: 10px;
+    padding: 8px 13px;
+}
+.cookiesInfo a{
+    color: black;
+    text-decoration: underline;
+    display: inline-block;
+    transition-duration: 250ms;
+}
+.cookiesInfo a:hover{
+    color: rgb(118, 118, 118);
+}
+.cookiesInfo p{
+    display: inline-block;
 }

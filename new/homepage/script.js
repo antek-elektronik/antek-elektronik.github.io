@@ -17,7 +17,11 @@ if (document.cookie.split(';').some((item) => item.includes('language=polish')))
 }
 else{
     console.error("developer fucked something up with cookies");
+    language = "english"; //very universal language
+    englishCheckbox.checked = true;
 }
+
+updateLanguage();
 
 //console.log(document.cookie);
 
