@@ -25,7 +25,7 @@ else{
 
 if(document.cookie.split(';').some((item) => item.includes("cookie_consent=true"))){
     cookieConsent = true;
-    document.getElementById("cookiesInfo").display = "none";
+    document.getElementById("cookiesInfo").style.display = "none";
 } else{
     document.cookie = "cookie_consent=false";
     cookieConsent = false;
