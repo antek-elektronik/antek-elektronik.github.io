@@ -1,10 +1,12 @@
 //test
 console.log("Welcome to my website!");
 
-englishCheckbox = document.getElementById("englishCheckbox");
-polishCheckbox = document.getElementById("polishCheckbox");
+var englishCheckbox = document.getElementById("englishCheckbox");
+var polishCheckbox = document.getElementById("polishCheckbox");
 
 var language = "";
+
+var cookieConsent = false; //do user allowed cookies?
 
 if (document.cookie.split(';').some((item) => item.includes('language=polish'))) {
     console.log("language is set to polish");
@@ -19,6 +21,14 @@ else{
     console.error("developer fucked something up with cookies");
     language = "english"; //very universal language
     englishCheckbox.checked = true;
+}
+
+if(document.cookie.split(';').some((item) => item.includes("cookie_consent=true"))){
+    cookieConsent = true;
+    document.getElementById("cookiesInfo").display = "none";
+} else{
+    document.cookie = "cookie_consent=false";
+    cookieConsent = false;
 }
 
 updateLanguage();
@@ -85,6 +95,8 @@ function allowCookies(){
     window.setTimeout(function(){ 
         document.getElementById("cookiesInfo").style.display = "none";
     }, 240);
+
+    document.cookie = "cookie_consent=true"
 }
 
 function exitWebsite(){
