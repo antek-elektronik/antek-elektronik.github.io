@@ -26,9 +26,11 @@ else{
 if(document.cookie.split(';').some((item) => item.includes("cookie_consent=true"))){
     cookieConsent = true;
     document.getElementById("cookiesInfo").style.display = "none";
+    console.log("cookie consent is true");
 } else{
     document.cookie = "cookie_consent=false";
     cookieConsent = false;
+    console.log("cookie consent is false");
 }
 
 updateLanguage();
@@ -40,7 +42,7 @@ window.setInterval(function(){
     var navbarHeight = document.getElementById("navbar").offsetHeight - 10;
     document.getElementById("logo").style.height = navbarHeight.toString() + "px";
     document.getElementById("logo").style.width = navbarHeight.toString() + "px";
-    //console.warn(navbarHeight) 
+    //console.warn(navbarHeight);
 }, 100);
 
 function updateLanguage(){
@@ -102,3 +104,11 @@ function allowCookies(){
 function exitWebsite(){
     close();
 }
+
+
+
+//from https://codepen.io/jdtibbs/pen/jrrwME
+$(window).scroll(function()
+{
+  $('#cookiesInfo').animate({bottom:"-" + $(window).scrollTop()+"px" },{queue: false, duration: 350});
+});

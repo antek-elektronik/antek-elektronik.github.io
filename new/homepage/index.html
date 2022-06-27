@@ -4,12 +4,13 @@
     <head>
         <meta charset="utf-8" /> 
         <link rel="icon" href="https://antek-gzara-animations.github.io/resources/logo2.png" />
-        <title><pl>strona główna</pl><eng>Homepage</eng></title>
+        <title>Homepage</title>
         <link rel="stylesheet" href="style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,300;1,700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,300;1,700&family=Noto+Serif:ital@1&display=swap" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     </head>
     <body>
             <ul class="navbar" id="navbar">
@@ -30,7 +31,7 @@
                 <img id="logo1" src="https://antek-gzara-animations.github.io/resources/FreshLogo4K.png" />
                 <p id="logoText">Antonii Gzara</p> 
 
-                <div>
+                <div id="newWebsite">
                     <h1>
                         <pl>Dlaczego nowa strona?</pl>
                         <eng>Why new website?</eng>
@@ -38,8 +39,8 @@
                     <p>
                         <pl>Każdego dnia czerpię coraz więcej wiedzy i doświadczenia o programowaniu i tworzeniu stron internetowych.</pl>
                         <eng>Every day I get more and more knowledge and experience about programming and web development.</eng>
-                        <pl>kiedy zajrzałem na moją starą stronę, przeraziłem się jej wyglądem. Była dla mnie bardzo przestarzała i ciężka w poruszaniu się</pl>
-                        <eng>when I looked at my old website, I had to change its appearance. It was for me very outdated and hard to navigate.</eng>
+                        <pl>Kiedy zajrzałem na moją starą stronę, przeraziłem się jej wyglądem. Była dla mnie bardzo przestarzała i ciężka w poruszaniu się</pl>
+                        <eng>When I looked at my old website, I had to change its appearance. It was for me very outdated and hard to navigate.</eng>
                         <pl>Dlatego stworzyłem nową stronę wyglądającą lepiej oraz (mam nadzieję) łatwiejszą do nawigacji</pl>
                         <eng>So I created a new website that looks better and (I hope) easier to navigate.</eng>
                         <pl>Na pewno zrobiłem duże zmiany w kodzie który jest teraz bardziej przejrzysty i łatwiejszy do przeczytania dla mnie</pl>
@@ -50,27 +51,28 @@
 
             <div class="cookiesInfo" id="cookiesInfo">
                 <p>
-                    <pl>
+                    <pl style="display: block;">
                         Hej! Ta strona używa ciasteczek, ale niech to cię nie przerazi. Nie śledzą cię ani nie zbierają informacji o tobie. Wykorzystuję je tylko do zapisania preferencji językowych :) </pl>
-                    </pl>
-                    <eng>
+                    
+                    <eng style="display: none;">
                         Hi! This website uses cookies, but don't be scared. They are not tracing you or doing some nasty stuff. I use cookies only to save your language preferences :)
                     </eng>
                     
-                    <pl><a href="https://ec.europa.eu/info/cookies_pl">Dowiedz się więcej o ciasteczkach</a></pl>
-                    <eng><a href="https://ec.europa.eu/info/cookies_en">Learn more about cookies</a></eng>
-                    <a href="https://github.com/Antek-Gzara-Animations/Antek-Gzara-Animations.github.io"><pl>kod źródłowy</pl><eng>source code</eng></a>
+                    <pl style="display: block;"><a href="https://ec.europa.eu/info/cookies_pl">Dowiedz się więcej o ciasteczkach</a></pl>
+                    <eng style="display: none;"><a href="https://ec.europa.eu/info/cookies_en">Learn more about cookies</a></eng>
+                    <a href="https://github.com/Antek-Gzara-Animations/Antek-Gzara-Animations.github.io"><pl style="display: block;">kod źródłowy</pl><eng style="display: none;">source code</eng></a>
                 </p>
                 <br>
                 <button onclick="allowCookies();">
-                    <eng>I understand and agree for cookies use</eng> <pl>Rozumiem i zgadzam się na użycie ciasteczek</pl>
+                    <eng style="display: none;">I understand and agree for cookies use</eng> <pl style="display: block;">Rozumiem i zgadzam się na użycie ciasteczek</pl>
                 </button>
                 <button onclick="exitWebsite();">
-                    <eng>I don't agree and I am leaving this site</eng> <pl>/Nie zgadzam się i opuszczam tę stronę</pl>
+                    <eng style="display: none;">I don't agree and I am leaving this site</eng> <pl style="display: block;">Nie zgadzam się i opuszczam tę stronę</pl>
                 </button>
 
             </div>
 
             <script src="script.js"></script>
+            
     </body>
 </html>
