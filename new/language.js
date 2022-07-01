@@ -1,6 +1,3 @@
-//test
-console.log("Welcome to my website!");
-
 var englishCheckbox = document.getElementById("englishCheckbox");
 var polishCheckbox = document.getElementById("polishCheckbox");
 
@@ -35,16 +32,6 @@ if(document.cookie.split(';').some((item) => item.includes("cookie_consent=true"
 
 updateLanguage();
 
-//console.log(document.cookie);
-
-//update logo size on navbar based on navbar height
-window.setInterval(function(){
-    var navbarHeight = document.getElementById("navbar").offsetHeight - 10;
-    document.getElementById("logo").style.height = navbarHeight.toString() + "px";
-    document.getElementById("logo").style.width = navbarHeight.toString() + "px";
-    //console.warn(navbarHeight);
-}, 100);
-
 function updateLanguage(){
     if(polishCheckbox.checked == true){
         console.log("language is changed to polish now");
@@ -62,6 +49,7 @@ function updateLanguage(){
 
     updateSite();
 }
+
 
 function updateSite(){
     var polishElements = document.getElementsByTagName("pl");
@@ -91,24 +79,3 @@ function updateSite(){
         alert("there was an error while setting language!");
     }
 }
-
-function allowCookies(){
-    document.getElementById("cookiesInfo").style.fontSize = "0";
-    window.setTimeout(function(){ 
-        document.getElementById("cookiesInfo").style.display = "none";
-    }, 240);
-
-    document.cookie = "cookie_consent=true"
-}
-
-function exitWebsite(){
-    close();
-}
-
-
-
-//from https://codepen.io/jdtibbs/pen/jrrwME
-$(window).scroll(function()
-{
-  $('#cookiesInfo').animate({bottom:"-" + $(window).scrollTop()+"px" },{queue: false, duration: 350});
-});

@@ -13,6 +13,11 @@ body{
     background-color: #e7e7e7;
 }
 
+body[id="navBar"]{
+    width: 100%;
+    height: fit-content;
+}
+
 /*navigation bar on top of the screen*/
 .navbar{
     list-style-type: none;
@@ -23,6 +28,13 @@ body{
     height: 50px;
 
     font-family: 'Noto Sans', sans-serif;
+
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+
+    z-index: 10;
 }
 
 .navbar img{
@@ -35,7 +47,6 @@ body{
 
 .navbar li[id="left"]{
     float: left;
-    
 }
 
 .navbar li[id="right"]{
@@ -63,13 +74,14 @@ body{
 /* main content container */
 .main{
     width: 80%;
-    height: 100vh;
+    height: fit-content;
     margin-left: 10%;
     margin-right: 10%;
 
     background-color: #dcdcde;
 
     padding-top: 5vh;
+    padding-bottom: 10px;
 }
 .main img[id="logo1"]{
     height: 20vh;
@@ -80,10 +92,10 @@ body{
 .main p[id="logoText"]{
     font-size: 10vh;
 }
-.main div[id="newWebsite"]{
+.main div[id="content1"]{
     margin-top: 20px;
 }
-.main div[id="newWebsite"] p{
+.main div[id="content1"] p{
     background-color: #b0b0b0;
     margin-top: 0;
     padding-top: 0;
@@ -96,7 +108,7 @@ body{
 
     font-size:larger;
 }
-.main div[id="newWebsite"] h1{
+.main div[id="content1"] h1{
     margin-bottom: 0;
     padding-bottom: 0;
     background-color: #b0b0b0;
@@ -108,6 +120,14 @@ body{
     color: #515151;
     margin-left: 10px;
 
+}
+.main div[id="content1"] a{
+    color: #515151;
+    text-decoration: none;
+}
+.main div[id="content1"] a:hover{
+    color: #515151;
+    text-decoration: underline;
 }
 
 

@@ -5,7 +5,7 @@
         <meta charset="utf-8" /> 
         <link rel="icon" href="https://antek-gzara-animations.github.io/resources/logo2.png" />
         <title>Homepage</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="../style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,300;1,700&display=swap" rel="stylesheet">
@@ -13,25 +13,19 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     </head>
     <body>
-            <ul class="navbar" id="navbar">
-                <li id="left"><img src="https://antek-gzara-animations.github.io/resources/FreshLogo1080p.png" id="logo"></li>
-                <li id="left"><a href="../homepage/"><pl>strona główna</pl><eng>homepage</eng></a></li>
-                <li id="left"><a href="../articles/"><pl>artykuły</pl><eng>articles</eng></a></li>
-                <li id="left"><a href="../downloads/"><pl>pliki do pobrania</pl><eng>files to download</eng></a></li>
-                <li id="left"><a href="../contact/"><pl>kontakt</pl><eng>contact</eng></a></li>
-                <li id="right">
-                    <input type="radio" id="englishCheckbox" value="english" name="language" onclick="updateLanguage()" />
-                    <label for="englishCheckbox">English</label>
-                    <input type="radio" id="polishCheckbox" value="polski" name="language" onclick="updateLanguage()"/>
-                    <label for="polishCheckbox">Polski</label>
-                </li>
-            </ul>
+            <ul class="navbar" id="navbar"></ul>
+
+            <script>
+                $(function(){
+                    $("#navbar").load("https:\\\\antek-gzara-animations.github.io\\new\\navbar.htm");
+                });
+            </script>
 
             <div class="main">
                 <img id="logo1" src="https://antek-gzara-animations.github.io/resources/FreshLogo4K.png" />
                 <p id="logoText">Antonii Gzara</p> 
 
-                <div id="newWebsite">
+                <div id="content1">
                     <h1>
                         <pl>Dlaczego nowa strona?</pl>
                         <eng>Why new website?</eng>
@@ -47,7 +41,54 @@
                         <eng>I definitely made a lot of changes in the code which is now more readable and easier to read for me.</eng>
                     </p>
                 </div>
+        
+                <div id="content1">
+                    <h1>
+                        <pl>kim jestem?</pl>
+                        <eng>who am I?</eng>
+                    </h1>
+                    <p>
+                        <pl>Hej, mam na imię Antek. Interesuję się (jak mogłeś już zauważyć) informatyką i elektroniką. Moje ulubione języki programowania to kolejno: C# HTML/CSS/JS python.</pl>
+                        <eng>Hi, my name is Antek. I am interested in (if you have already noticed) computer science and electronics. My favorite programming languages are: C# HTML/CSS/JS python.</eng>
+                        <pl>Mam 15 lat. </pl>
+                        <eng>I am 15 years old.</eng>
+                    </p>
+                </div>
+
+                <div id="content1">
+                    <h1>
+                        <pl>Po co ta strona internetowa?</pl>
+                        <eng>What's the purpose of this website?</eng>
+                    </h1>
+                    <p>
+                        <pl>Będę na niej umieszczał swoje najnowsze projekty i aktualności (jeżeli o niej nie zapomnę :) )</pl>
+                        <eng>I will put my newest projects and news on this website (if I don't forget :) )</eng>
+                        <pl>To także świetny sposób na rozwijaie swojej pasji i zbieranie doświadczenia.</pl>
+                        <eng>To also a great way to develop my passion and collect experience.</eng>
+                        <pl>wszelkie zastrzeżenia lub pomysły proszę zgłaszać poprzez moje social media</pl>
+                        <eng>any restrictions or ideas please report them through my social media</eng>
+                    </p>
+                </div>
+
+                <div id="content1">
+                    <h1>
+                        <pl>Social media</pl>
+                        <eng>Social media</eng>
+                    </h1>
+                    <p>
+                        <pl>Oto moje social media:</pl>
+                        <eng>Here are my social media:</eng>
+                        <a href="https://www.instagram.com/antek_gzara_animations/"><pl>&nbsp&nbsp-Instagram (pozwala na bezpośrednie wiadomości)</pl> <eng>&nbsp&nbsp- Instagram (allows for direct messages)</eng></a>
+                        <a href="https://github.com/Antek-Gzara-Animations/">&nbsp&nbsp- Github</a><br>
+                        <a href="https://tiktok.com/@youngdevpl">&nbsp&nbsp- TikTok</a><br>
+                        <a href="https://discord.gg/tddGswP8Rk"><pl>&nbsp&nbsp- Mój server discord (trochę już opustoszały)</pl><eng>&nbsp&nbsp- My discord server (kinda empty and mostly polish)</eng></a>
+                    </p>
+                </div>
+
+
+                <div style="margin-bottom: 30px;"></div>
             </div>
+
 
             <div class="cookiesInfo" id="cookiesInfo">
                 <p>
@@ -69,10 +110,15 @@
                 <button onclick="exitWebsite();">
                     <eng style="display: none;">I don't agree and I am leaving this site</eng> <pl style="display: block;">Nie zgadzam się i opuszczam tę stronę</pl>
                 </button>
-
+               
             </div>
 
-            <script src="script.js"></script>
+            
+
+            <script src="..\script.js"></script>
+            <script src="..\language.js"></script>
+            <script src="..\cookieConsent.js"></script>
+            
             
     </body>
 </html>
