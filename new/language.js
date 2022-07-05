@@ -24,7 +24,7 @@ if(document.cookie.split(';').some((item) => item.includes("cookie_consent=true"
     cookieConsent = true;
     document.getElementById("cookiesInfo").style.display = "none";
     console.log("cookie consent is true");
-} else{
+} else {
     document.cookie = "cookie_consent=false";
     cookieConsent = false;
     console.log("cookie consent is false");
