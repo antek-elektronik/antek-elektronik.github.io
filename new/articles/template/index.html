@@ -1,0 +1,57 @@
+<!--Hello! this is deafult template for my website-->
+
+<html>
+    <head>
+        <meta charset="utf-8" />  <!--setting charset on website-->
+        <link rel="icon" href="https://antek-gzara-animations.github.io/resources/logo2.png" /> <!--adding icon to browser tab-->
+        <title>Homepage</title> <!--adding title to browset tab-->
+        <link rel="stylesheet" href="../../style.css"> <!--attaching stylesheet to website-->
+        <link rel="preconnect" href="https://fonts.googleapis.com"> <!--connecting to google fonts-->
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!--connecting to google fonts-->
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,300;1,700&display=swap" rel="stylesheet"> <!-- attaching fonts to a website-->
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,300;1,700&family=Noto+Serif:ital@1&display=swap" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> <!--attach jquery to website-->
+    </head>
+
+    <body>
+
+        <!--navigation bar-->
+        <!--you don't have to change anything here-->
+        <ul class="navbar" id="navbar">
+            <li id="left"><img src="https://antek-gzara-animations.github.io/resources/FreshLogo1080p.png" id="logo"></li> <!--logo-->
+            <li id="left"><a href="../../homepage/"><pl>strona główna</pl><eng>homepage</eng></a></li> <!--buttons -->
+            <li id="left"><a href="../../articles/"><pl>artykuły</pl><eng>articles</eng></a></li> 
+            <li id="left"><a href="../../downloads/"><pl>pliki do pobrania</pl><eng>files to download</eng></a></li>
+            <li id="left"><a href="../../contact/"><pl>kontakt</pl><eng>contact</eng></a></li>
+            <li id="right"> 
+                <input type="radio" id="englishCheckbox" value="english" name="language" onclick="updateLanguage()" /> <!--language checkboxes-->
+                <label for="englishCheckbox">English</label>
+                <input type="radio" id="polishCheckbox" value="polski" name="language" onclick="updateLanguage()"/>
+                <label for="polishCheckbox">Polski</label>
+            </li>
+        </ul>
+
+        <div class="main"> <!--this is main content (darker section of background on website)-->
+
+            <div id="content1">  
+                <h1>
+                    <eng>header</eng> <pl>nagłówek</pl>
+                </h1>
+                <p>
+                    <eng>content content content</eng>
+                    <pl>zawartość zawartość zawartość</pl>
+                    <end> use this element by adding </end>
+                    <pl>aby użyć takiego elementu, użyj </pl>
+                    id="content1"
+                    <eng> in div tag</eng>
+                    <pl> w tagu div</pl>
+                </p>
+            </div>
+        </div>
+        
+
+        <script src="..\..\script.js"></script>
+        <script src="..\..\language.js"></script>
+        <script src="..\..\cookieConsent.js"></script>
+    </body>
+</html>
