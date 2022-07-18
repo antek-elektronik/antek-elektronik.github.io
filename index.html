@@ -21,6 +21,29 @@
       .flag{
         border: solid 1px black;
       }
+
+      .new{
+        margin-top: 20px;
+      }
+      .new a{
+        text-decoration: none;
+        color: black;
+        font-size: 30px;
+        display: block;
+        text-align: center;
+        transition-duration: 300ms;
+      }
+
+      .new a:hover{
+        text-decoration: underline;
+        font-size: 32px;
+      }
+
+      .new a span[id="warning"]{
+        color: rgb(212, 204, 87);
+        text-decoration: underline;
+
+      }
     </style>
   </head>
   <body>
@@ -31,6 +54,11 @@
       <a href="old/eng/index.html">
         <img src="resources/UKFlag.png" class="flag" height="300" width="600"/>
       </a>
+    </div>
+
+    <div class="new">
+      <a href="new/index.html">check out new version of website (<span id="warning">warning</span>, it's not finished)</a>
+      <a href="new/index.html">zobacz nową wersję strony (<span id="warning">uwaga</span>, nie jest jeszcze skończona)</a>
     </div>
   </body>
 </html>
