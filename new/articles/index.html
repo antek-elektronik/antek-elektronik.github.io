@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" href="https://antek-gzara-animations.github.io/resources/logo2.png" /> <!--adding icon to browser tab-->
+        <title>articles</title>
+        <link rel="stylesheet" href="../style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,300;1,700&display=swap" rel="stylesheet"> <!-- attaching fonts to a website-->
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,300;1,700&family=Noto+Serif:ital@1&display=swap" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    </head>
+
+    <body>
+        <ul class="navbar" id="navbar">
+            <li id="left"><img src="https://antek-gzara-animations.github.io/resources/FreshLogo1080p.png" id="logo"></li>
+            <li id="left"><a href="../homepage/"><pl>strona główna</pl><eng>homepage</eng></a></li>
+            <li id="left"><a href="../articles/"><pl>artykuły</pl><eng>articles</eng></a></li> 
+            <li id="left"><a href="../downloads/"><pl>pliki do pobrania</pl><eng>files to download</eng></a></li>
+            <li id="left"><a href="../contact/"><pl>kontakt</pl><eng>contact</eng></a></li>
+            <li id="right"> 
+                <input type="radio" id="englishCheckbox" value="english" name="language" onclick="updateLanguage()" /> 
+                <label for="englishCheckbox">English</label>
+                <input type="radio" id="polishCheckbox" value="polski" name="language" onclick="updateLanguage()"/>
+                <label for="polishCheckbox">Polski</label>
+            </li>
+        </ul>
+        <div class="main">
+
+            <div id="header1">
+                <h1>
+                    articles
+                </h1>
+                <p id="right">list of "articles" on my website</p>
+            </div>
+
+            <div id="content1">
+                <h1>
+                    
+                </h1>
+                <p>
+                    
+                </p>
+            </div>
+            
+        </div>
+        
+
+        <script src="..\script.js"></script>
+        <script src="..\language.js"></script>
+        <script src="..\cookieConsent.js"></script>
+    </body>
+</html>

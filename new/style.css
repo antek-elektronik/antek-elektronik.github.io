@@ -92,6 +92,9 @@ body[id="navBar"]{
 .main p[id="logoText"]{
     font-size: 10vh;
 }
+
+/*content1*/
+
 .main div[id="content1"]{
     margin-top: 20px;
 }
@@ -128,6 +131,31 @@ body[id="navBar"]{
 .main div[id="content1"] a:hover{
     color: #515151;
     text-decoration: underline;
+}
+
+/*header1*/
+
+.main div[id="header1"]{
+    background-color: #c7c7ca;
+    padding: 5px;
+    width: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 20px;
+    border-radius: 30px;
+    text-align: center;
+}
+
+.main div[id="header1"] p[id="left"]{
+    text-align: left;
+}
+
+.main div[id="header1"] p[id="right"]{
+    text-align: right;
+}
+
+.main div[id="header1"] p[id="center"]{
+    text-align: center;
 }
 
 
