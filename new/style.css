@@ -148,18 +148,24 @@ body[id="navBar"]{
     margin-top: 20px;
     border-radius: 30px;
     text-align: center;
+    color: #515151;
 }
 
 .main div[id="header1"] p[id="left"]{
     text-align: left;
+    text-decoration: underline;
+    margin-left: 20px;
 }
 
 .main div[id="header1"] p[id="right"]{
     text-align: right;
+    text-decoration: underline;
+    margin-right: 20px;
 }
 
 .main div[id="header1"] p[id="center"]{
     text-align: center;
+    text-decoration: underline;
 }
 
 /* list1 */
