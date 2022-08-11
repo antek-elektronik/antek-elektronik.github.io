@@ -158,6 +158,37 @@ body[id="navBar"]{
     text-align: center;
 }
 
+/* list1 */
+
+.main div[id="list1"]{
+    background-color: #c7c7ca;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-radius: 10px;
+    padding: 5px;
+    margin-top: 30px;
+}
+
+.main div[id="list1"] el{
+    display: block;
+}
+
+.main div[id="list1"] h1{
+    margin: 15px;
+    color: #515151;
+    text-decoration: underline;
+}
+
+.main div[id="list1"] el a{
+    text-decoration: none;
+    transition-duration: 300ms;
+}
+
+.main div[id="list1"] el a:hover{
+    text-decoration: underline;
+    margin-left: 20px;
+}
 
 /*cookie files information*/
 
