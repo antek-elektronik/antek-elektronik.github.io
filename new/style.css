@@ -9,6 +9,10 @@
 }
 */
 
+/*google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500&display=swap');
+
+/* body */
 body{
     background-color: #e7e7e7;
 }
@@ -176,18 +180,20 @@ body[id="navBar"]{
 
 .main div[id="list1"] h1{
     margin: 15px;
-    color: #515151;
+    color: #424242;
     text-decoration: underline;
 }
 
 .main div[id="list1"] el a{
     text-decoration: none;
+    font-family: 'Raleway', sans-serif;
     transition-duration: 300ms;
+    color: #515151;
 }
 
 .main div[id="list1"] el a:hover{
     text-decoration: underline;
-    margin-left: 20px;
+    margin-left: 10px;
 }
 
 /*cookie files information*/
