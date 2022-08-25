@@ -197,7 +197,30 @@ body[id="navBar"]{
     color: #515151;
 }
 
+.main div[id="list1"] el a pl{
+    text-decoration: none;
+    font-family: 'Raleway', sans-serif;
+    transition-duration: 300ms;
+    color: #515151;
+}
+
+.main div[id="list1"] el a eng{
+    text-decoration: none;
+    font-family: 'Raleway', sans-serif;
+    transition-duration: 300ms;
+    color: #515151;
+}
+
 .main div[id="list1"] el a:hover{
+    text-decoration: underline;
+    margin-left: 10px;
+}
+
+.main div[id="list1"] el a eng:hover{
+    text-decoration: underline;
+    margin-left: 10px;
+}
+.main div[id="list1"] el a pl:hover{
     text-decoration: underline;
     margin-left: 10px;
 }
