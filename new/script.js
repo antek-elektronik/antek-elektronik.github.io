@@ -1,7 +1,9 @@
 //test
 console.log("Welcome to my website!");
 
-
+$(function(){
+    $("#navbar-placeholder").load("https://antek-gzara-Animations.github.io/new/navbar.html");
+});
 
 //console.log(document.cookie);
 
