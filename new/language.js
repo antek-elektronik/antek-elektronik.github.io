@@ -9,7 +9,7 @@ setTimeout(function(){ //I added timeout on everything so navbar can easily load
 
     if (document.cookie.split(';').some((item) => item.includes('language=polish'))) {
         console.log("language is set to polish");
-        language = "polish";
+        language = "polish"; //
         polishCheckbox.checked = true;
     } else if (document.cookie.split(';').some((item) => item.includes('language=english'))) {
         console.log("language is set to english");
