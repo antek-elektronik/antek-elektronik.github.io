@@ -1,11 +1,11 @@
 function Home(){
-  window.location.href = "https:\\\\antek-gzara-animations.github.io\\shop";
+  window.location.href = "https:\\\\antek-elektronik.github.io\\shop";
 }
 function Apps(){
-  window.location.href = "https:\\\\antek-gzara-animations.github.io\\shop\\programs";
+  window.location.href = "https:\\\\antek-elektronik.github.io\\shop\\programs";
 }
 function Games(){
-  window.location.href = "https:\\\\antek-gzara-animations.github.io\\shop\\games";
+  window.location.href = "https:\\\\antek-elektronik.github.io\\shop\\games";
 }
 
 /*
@@ -22,7 +22,7 @@ var titleInteral = window.setInterval(function(){
   }
 }, 2000);
 
-var clickSound = new Audio('https:\\\\antek-gzara-animations.github.io\\resources\\audio\\click.mp3');
+var clickSound = new Audio('https:\\\\antek-elektronik.github.io\\resources\\audio\\click.mp3');
 
 window.addEventListener("click", playClickSound);​
 

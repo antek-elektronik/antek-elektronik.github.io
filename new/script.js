@@ -2,7 +2,7 @@
 console.log("Welcome to my website!");
 
 $(function(){
-    $("#navbar-placeholder").load("https://antek-gzara-Animations.github.io/new/navbar.html #navbar");
+    $("#navbar-placeholder").load("https://antek-elektronik.github.io/new/navbar.html #navbar");
     
 });
 
