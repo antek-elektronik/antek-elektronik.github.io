@@ -1,64 +1,108 @@
-e<!DOCTYPE HTML>
-
-<!--SELECT LANGUAGE-->
+<!DOCTYPE HTML>
 
 <html>
-  <head>
-    <link rel="icon" href="https://antek-elektronik.github.io/resources/logo2.png" />
-    <!--<meta http-equiv = "refresh" content = "2; url = https://antek-elektronik.github.io/pl" /> -->
-    
-    <meta charset="UTF-8">
-    <meta name="description" content="My personal website where you can lern about me and download my projects">
-    <meta name="keywords" content="C#, Antek, Gzara, Antek Gzara, Antek Gzara Animations, Gzara Antoni, Antoni, antek, CyberDev, cyberdev, YoungDevPl, Younddevpl, youngdevpl">
-    <meta name="author" content="Antoni Gzara">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500&family=Comfortaa:wght@400;500&display=swap" rel="stylesheet">
 
-    <title>language</title>
-    <style>
-      .buttons{
-        text-align: center;
-      }
-      .flag{
-        border: solid 1px black;
-      }
+        <!--strona pisana własnoręcznie :) -->
+        <meta charset="utf-8" />
+        <title>Antek Elektronik</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
 
-      .new{
-        margin-top: 20px;
-      }
-      .new a{
-        text-decoration: none;
-        color: black;
-        font-size: 30px;
-        display: block;
-        text-align: center;
-        transition-duration: 300ms;
-      }
+            body{
+                text-align: center;
+            }
 
-      .new a:hover{
-        text-decoration: underline;
-        font-size: 32px;
-      }
+            .link{
+                font-size: 2vh;
+                display: block;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                color: black;
+                text-decoration: none;
+                transition-duration: 300ms;
+                position: relative;
+                font-family: 'Lilita One', cursive;
 
-      .new a span[id="warning"]{
-        color: rgb(212, 204, 87);
-        text-decoration: underline;
+            }
+            .link:hover{
+                font-size: 3vh;
+                
+            }
 
-      }
-    </style>
-  </head>
-  <body>
-    <div class="buttons">
-      <a href="old/pl/index.html">
-        <img src="resources/PLFlag.png" class="flag" height="300" width="600"/>
-      </a>
-      <a href="old/eng/index.html">
-        <img src="resources/UKFlag.png" class="flag" height="300" width="600"/>
-      </a>
-    </div>
+            .link::after {
+              content: "";
+              position: absolute;
+              width: 6%;
+              margin-left:47%;
+              height: 2px;
+              bottom: 0;
+              left: 0;
+              background-color: #000;
+              visibility: hidden;
+              transform: scaleX(0);
+              transition: all 0.3s ease-in-out 0s;
+            }           
 
-    <div class="new">
-      <a href="new/index.html">check out new version of website (<span id="warning">warning</span>, it's not finished)</a>
-      <a href="new/index.html">zobacz nową wersję strony (<span id="warning">uwaga</span>, nie jest jeszcze skończona)</a>
-    </div>
-  </body>
+            .link:hover::after {
+              visibility: visible;
+              transform: scaleX(1);
+            }
+            #title1{
+                font-family: 'Barlow Condensed', sans-serif;
+                font-size: 10vh;
+                transform: translateX(600%);
+                transition-duration: 500ms;
+            }
+            #title2{
+                font-family: 'Comfortaa', cursive;
+                font-size: 5vh;
+                transform: translateX(-600%);
+                transition-duration: 500ms;
+            }
+            #link1, #link2, #link3{
+                transform: translateY(5000%);
+            }
+        </style>
+
+    </head>
+    <body>
+        <div>
+            <h1 id="title1">
+                Antek Elektronik
+            </h1>
+            <p id="title2">
+                Antoni Gzara
+            </p>
+            
+        </div>
+        <div id="links">
+            <a href="" target="_blank" id="link1" class="link">blogspot</a>
+            <a href="" target="_blank" id="link2" class="link">instagram</a>
+            <a href="" target="_blank" id="link3" class="link">github</a>
+        </div>
+
+        <script>
+            window.setTimeout(function(){
+                document.getElementById("title1").style.transform = "translateX(0)";
+            }, 50);
+            window.setTimeout(function(){
+                document.getElementById("title2").style.transform = "translateX(0)";
+            }, 500);
+
+            window.setTimeout(function(){
+                document.getElementById("link1").style.transform = "translateY(0)";
+            }, 1000);
+            window.setTimeout(function(){
+                document.getElementById("link2").style.transform = "translateY(0)";
+            }, 1200);
+            window.setTimeout(function(){
+                document.getElementById("link3").style.transform = "translateY(0)";
+            }, 1400);
+
+        </script>
+    </body>
 </html>
