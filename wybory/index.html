@@ -1,0 +1,49 @@
+<html> 
+     <head> 
+         <title>redirecting</title>
+         <style>
+           /*REDIRECT*/ 
+  
+ .redirect-title{ 
+     text-align: center; 
+     background-color: bisque; 
+     text-decoration-color: brown; 
+     text-shadow: 1px brown; 
+     font-size: 40px; 
+ } 
+ .counterElement{ 
+     margin-top: 30px; 
+     font-size: 40px; 
+     text-align: center; 
+     width: 100%; 
+ } 
+  
+ .ReDirBody{ 
+     background-color: bisque; 
+ } 
+  
+ /*GLOBAL*/
+         </style>
+         <script>
+           var counter = 5; 
+  
+ function CounterTick(){ 
+     counter--; 
+     document.getElementById("counterElement").innerHTML = counter; 
+ } 
+  
+ function RedirectToHomepage(){ 
+     setInterval(CounterTick, 1000); 
+     console.log("redirect in 5000 millis..."); 
+     setTimeout(function(){ 
+                 window.location = 'JSclicker'; 
+             }, 5000); 
+ }
+         </script> 
+     </head> 
+     <body> 
+         <h1 class="redirect-title">Strona w budowiez wróć tu później. Za moment zostaniesz przeniesiony do gry clicker...</h1> 
+         <p class="counterElement" id="counterElement">5</p> 
+         <script>RedirectToHomepage();</script> 
+     </body> 
+</html>
