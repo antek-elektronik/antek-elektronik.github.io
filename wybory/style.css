@@ -6,7 +6,7 @@
 
 /* here set color of the sides of the screen */
     :root{
-        --sidesColor: #f2f0f0;
+        --sidesColor: white;
     }
 
 /*navigation bar on top of the screen*/
@@ -212,4 +212,9 @@
     .bottomBar a:hover::after{
         transform: scaleX(1);
         transform-origin: bottom left;
+    }
+
+    .button{
+        width: 30%;
+        height: 15vh;
     }
