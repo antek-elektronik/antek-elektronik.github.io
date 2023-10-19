@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+
+<html> 
+    <head>
+        <title>experiment 5</title>
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="homepage_style.css" />
+
+        <script src="jquery.js"></script> <!--nie wolno zapominać o jquery!!!-->
+    </head>
+
+
+<body>
+    <!--podobne do experiment 1, ale zamiast table prawie wszystko jest na div-->
+    <div class="navbar" id="navbar">
+        <div class="logo"><img src="resources/zsel3.png" class="navBarLogo"></div>
+        <div class="blank"> </div>
+        <div class="mask1"> </div>
+        <div class="mask2"> </div>
+        <div class="mask3"> </div>
+        <div class="mask4"> </div>
+        <div class="mask5"> </div>
+        <div class="mask6"> </div>
+        
+        
+        <div class="navbarElement"><a href="../homepage/">strona główna</pl></a></div>
+        
+    </div>
+    
+    <div class="content-left"> </div>
+
+    <div class="content"> <!-- Put website elements here -->
+        <div class="tile">
+            <div class="centered">
+                <p class="schoolName">Za wcześnie dosałeś ulotkę ;)<br>wpadnij tu jutro!</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-right"> </div>
+
+    <div class="bottomBar" id="bottomBar">
+        <a href="https://www.facebook.com/zselublin/">facebook zsel</a>
+        <a href="https://www.facebook.com/InternatTechnikumElektronicznego">facebook internatu zsel</a>
+    </div>
+
+    <script>
+        //<p style="margin-top: 101%;">test przewijania paska</p>
+
+        //top bar following screen while scrolling
+        $(window).scroll(function()
+        {
+          document.getElementById("navbar").className = "navbar animated"; //ten
+          $('#navbar').animate({top:$(window).scrollTop()+"px" },{queue: false, duration: 300}); //to działa, nie ruszać
+          window.setTimeout(function(){ document.getElementById("navbar").className = "navbar"; }); // i ten kawałek kodu odpowiadają za zmianę wyglądu paska podczas przewijania, trochę nie ma to sensu ze względu na prędkość z jaką porusza się pasek, w razie problemów lub czegoś innego lepiej te 2 linie wywalić
+        });
+
+        //bottom bar finding real bottom of the screen
+        var body = document.body, html = document.documentElement;
+        var height = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight );
+        var bottomBar = document.getElementById("bottomBar");
+        bottomBar.style.top = (height - 50).toString() + "px"; //put the bar at the bottom of the page, not just a visible part of website on screen
+    </script>
+</body>
+</html>

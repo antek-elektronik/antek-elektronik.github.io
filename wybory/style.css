@@ -1,0 +1,215 @@
+/* body */ 
+    body[id="navBar"]{
+        width: 100%;
+        height: fit-content;
+    }
+
+/* here set color of the sides of the screen */
+    :root{
+        --sidesColor: #f2f0f0;
+    }
+
+/*navigation bar on top of the screen*/
+    .navbar{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: show;
+        background-color: #333;
+        height: 50px;
+
+        font-family: 'Noto Sans', sans-serif;
+
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+
+        z-index: 10;
+    }   
+    .navbar a{
+        display: block;
+        padding: 14px 16px;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        transition-duration: 350ms;
+    }
+
+    .navbar a:hover{
+        background-color: #111;
+        border-radius: 10px;
+    }
+
+    .navbar img{
+        width: 80%;
+        height: 80%;
+        margin-bottom: 15%;
+        margin-top: 5%;
+        background-color: transparent;
+        margin-left: 5%;
+        margin-right: 15%;
+    }
+
+    .navbar .navbarElement{
+        float: left;
+    }
+
+    .navbar .logo{
+        display: block;
+        float: left;
+        background-color: #333;
+        margin-top: 5px;
+
+        left: 0;
+        height: 100px;
+        width: 120px;
+        text-align: center;
+    }   
+    .navbar .blank{
+        position: absolute;
+        bottom: -55px;
+        left: 110px;
+        background-color: var(--sidesColor);
+        height: 55px;
+        width: 20px;
+        border-radius: 10px 0 0 0;
+    }  
+
+/* cool rounded logo */   
+    .navbar .mask1{
+        position: absolute;
+        bottom: -55px;
+        left: 90px;
+        background-color: var(--sidesColor);
+        height: 20px;
+        width: 20px;
+    }
+    .navbar .mask2{
+        position: absolute;
+        bottom: -55px;
+        left: 90px;
+        background-color: #333;
+        height: 20px;
+        width: 20px;
+        border-radius: 0 0 10px 0;
+    }   
+    .navbar .mask3{
+        position: absolute;
+        bottom: -55px;
+        left: 0px;
+        background-color: var(--sidesColor);
+        height: 40px;
+        width: 30px;
+    }
+    .navbar .mask4{
+        position: absolute;
+        bottom: -55px;
+        left: 20px;
+        background-color: #333;
+        height: 40px;
+        width: 10px;
+        border-radius: 0 0 0 10px;
+    }   
+    .navbar .mask5{
+        position: absolute;
+        bottom: -25px;
+        left: 10px;
+        background-color: #333;
+        height: 10px;
+        width: 10px;
+    }
+    .navbar .mask6{
+        position: absolute;
+        bottom: -25px;
+        left: 10px;
+        background-color: var(--sidesColor);
+        height: 10px;
+        width: 10px;
+        border-radius: 0 10px 0 0;
+    }
+
+
+/* webpage layout */
+
+    .content{
+        position: absolute;
+        width: 70%;
+        height: 1000px;
+        margin-left: 0;
+        margin-right: 0;
+        background-color: white;
+        display: inline-block;
+
+        padding-top: 60px;
+
+        top:0;
+        left: 15%;
+        right: 15%;
+    }
+    .content-left{
+        position: absolute;
+        margin: 0;
+        width: 15%;
+        height: 100%;
+        background-color: var(--sidesColor);
+        display: inline-block;
+        left: 0;
+        top: 0;
+        
+
+    }
+    .content-right{
+        margin: 0;
+        position: absolute;
+        width: 15%;
+        height: 100%;
+        background-color: var(--sidesColor);
+        display: inline-block;
+        right:0;
+        top:0;
+    }
+
+/* content */
+
+    .tile{
+        width: 100%;
+        margin: 0;
+    }
+
+/* Bottom bar */
+    .bottomBar{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 50px;
+        background-color: darkgrey;
+    }
+
+    .bottomBar a{
+        text-decoration: none;
+        display: inline-block;
+        position: relative;
+        color: #464646;
+        top: 15px;
+        margin-right: 10px;
+    }
+
+    .bottomBar a::after{
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 1px;
+        bottom: 0;
+        left: 0;
+        background-color: gray;
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+    }
+
+    .bottomBar a:hover::after{
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }

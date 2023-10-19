@@ -1,0 +1,11 @@
+.tile .centered{
+	width: 100%;
+	heght: 100px;
+	margin: 0;
+	text-align: center;
+}
+
+.tile .centered .schoolName{
+	color: black;
+	font-size: 40px;
+}
